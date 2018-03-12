@@ -1,0 +1,23 @@
+#!/usr/bin/python
+
+'''
+ENGLISH TO HINDI TRANSLATION USING DICTIONARY
+'''
+
+def translate(dict1):
+
+    print('the dictionary is:',dict1)
+    for i in dict1:
+        prompt='ENTER AN ENGLISH WORD FROM THE DICTIONARY:\n'
+        key=raw_input(prompt)
+        if (key in dict1):
+           print(dict1[key]) 
+        else:
+           print("WORD NOT FOUND IN DICTIONARY, PLEASE TRY AGAIN")
+         
+
+
+dict1={'movie':'cinema','god':'bhagwan','car':'gaadi'}
+translate(dict1)
+
+

@@ -1,0 +1,14 @@
+#!/usr/bin/python
+import re
+
+fh_post_codes=open("reg_expression_file11_b",'r')
+PLZ = {}
+for line in fh_post_codes:
+    (post_code, city, rest) = line.split(",",2)
+    PLZ[city.strip("\"")] =  post_code
+
+fh_largest_cities = open("reg_expression_file11_a",'r')
+for line in fh_largest_cities:
+    re_obj = re.search(r"^[0-9]{1,2}\.\s+([a-zA-Z\s]+[a-zA-Z])\s+[0-9]",line)
+    city = re_obj.group(1)
+    print city, PLZ[city]

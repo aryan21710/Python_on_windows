@@ -1,0 +1,48 @@
+#!/usr/bin/python
+'''
+Write a function is_member() that takes a value (i.e. a number, string, etc) x and a list of values a, and returns True if x is a member of a, False otherwise. (Note that this is exactly what the in operator does, but for the sake of the exercise you should pretend Python did not have this operator.)
+'''
+
+def is_member(char,lst):
+    print ('char and lst is', char , lst)
+    for i in range(len(lst)):
+        if char==lst[i]:
+           status="PRESENT"
+           break
+        else:
+           status="NOT PRESENT"
+           continue
+    
+    if status=="PRESENT":
+       return "TRUE IT EXISTS"
+    else:
+       return "FALSE DOESNT EXIST"
+
+
+
+
+
+lst=[]
+while "TRUE": 
+       prompt="Enter Some No's To Create A List ::\n"
+       input=raw_input(prompt)
+
+       if input != 'done':
+          lst.append(input)
+       else:
+          break
+
+
+print (' THE LIST CREATED IS::', lst)
+
+prompt='ENTER ANY CHAR WHICH NEEDS TO BE LOOKED UP IN LST::\n'
+char=raw_input(prompt)
+
+output=is_member(char,lst)
+print (output)
+
+
+
+
+
+

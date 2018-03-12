@@ -1,0 +1,43 @@
+#!/usr/bin/python
+
+
+import re
+
+fhand=open('46_file','r')
+fhand1=open('46_file_out','w')
+#fhand=open('test','r')
+lst=[]
+for line in fhand:
+    line=line.rstrip()
+    lst.append(line)
+
+
+#print (lst)
+
+fhand.close()
+
+fhand=open('46_file','r')
+#fhand=open('test','r')
+for line in fhand:
+
+    line=line.rstrip()
+    if len(line) >= 4:
+
+       word1,word2="",""
+       for i in range(len(line)):
+           if i%2==0:
+              word1=word1+line[i]
+           elif i%2==1:
+              word2=word2+line[i]
+
+       if word1 in lst and word2 in lst:
+          word1='"'+word1+'"'
+          word2='"'+word2+'"'
+          line='"'+line+'"'
+          out1=line+ ': makes ' + word1 +' and ' + word2
+          fhand1.write(out1)
+          fhand1.write('\n')
+          print ('\n')
+    else:
+       continue     
+        

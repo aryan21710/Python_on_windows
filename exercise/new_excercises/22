@@ -1,0 +1,43 @@
+#!/usr/bin/python
+'''
+Write a program to compute the frequency of the words from the input. The output should output after sorting the key alphanumerically. 
+Suppose the following input is supplied to the program:
+New to Python or choosing between Python 2 and Python 3? Read Python 2 or Python 3.
+Then, the output should be:
+2:2
+3.:1
+3?:1
+New:1
+Python:5
+Read:1
+and:1
+between:1
+choosing:1
+or:2
+to:1
+'''
+
+input="New to Python or choosing between Python 2 and Python 3? Read Python 2 or Python 3."
+
+
+input=input.split(" ")
+input.sort()
+print input
+cnt=0
+lst=[]
+dict={}
+for i in range(len(input)):
+
+    if input[i] != '.':
+       cnt=input.count(input[i])
+       dict[input[i]]=cnt
+    else:
+       continue
+      
+x=[]
+for key in dict:
+    x.append(str(key)+":"+str(dict[key]))
+
+x.sort()
+for i in range(len(x)):
+    print x[i]

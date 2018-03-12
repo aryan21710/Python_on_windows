@@ -1,0 +1,13 @@
+#!/usr/bin/python
+
+# PROGRAM TO FIND OUT WHETHER A NUMBER ENTERED BY USER IS PRIME NUMBER OR NOT
+
+input=int(raw_input("PLEASE ENTER ANY NUMBER:::"))
+
+
+if   input == 1 or input == 2:
+     print (" THE NUMBER %d ENTERED IS A PRIME NUMBER" %input)
+elif (input % 2 == 0) or (input % 3 == 0):
+     print (" THE NUMBER %d ENTERED IS NOT A PRIME NUMBER" %input)
+else:
+     print ("THE NUMBER %d ENTERED IS A PRIME NUMBER" %input)

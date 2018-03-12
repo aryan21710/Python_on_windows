@@ -1,0 +1,62 @@
+#!/usr/bin/python
+
+#EASTER EGG PROGRAM:- the program that prompts the user for the file name so that it prints a funny message when the user types in the exact file name 'na na boo boo'. The program should behave normally for all other files which exist and don't exist. Here is a sample execution of the program
+
+#python egg.py 
+#Enter the file name: mbox.txt
+#There were 1797 subject lines in mbox.txt
+
+#python egg.py 
+#Enter the file name: missing.tyxt
+#File cannot be opened: missing.tyxt
+
+#python egg.py 
+#Enter the file name: na na boo boo
+#NA NA BOO BOO TO YOU - You have been punk'd!
+
+
+# USE file testfile3
+
+import sys
+
+cnt,i=0,0
+list_spamvalue=[]
+filename=raw_input("PLEASE ENTER THE FILENAME TO EXECUTE IN THIS PROGRAM::")
+
+
+if filename=='na na boo boo':
+   print("NA NA BOO BOO TO YOU---YOU HAVE BEEN PUNKED")
+elif filename == 'testfile3':
+   try:   
+      fhand=open('testfile3','r')
+      print ('#### FILE IS TOO BIG. GOING TO PRINT ITS CONTENTS NOW #####')
+   
+      for line in fhand:
+          if 'X-DSPAM-Confidence:' in line:
+              count=line.count('X-DSPAM-Confidence:')          
+              cnt=cnt+count 
+              spamvalue=line.split(':') 
+              spamvalue=spamvalue[-1]
+              spamvalue=spamvalue.strip()
+              spamvalue=float(spamvalue) # THIS WILL REMOVE THE ' FROM THE LIST CHAR WHICH ARE FLOAT NO's. 
+              list_spamvalue.append(spamvalue) # MOVING THE VALUES TO A LIST
+              print ("THE LINE WHERE IT APPEAERS IS AD ITS SPAMVALUE IS::", line,spamvalue)
+          else:
+              continue
+   except:
+      
+      e=sys.exc_info()[0]
+      print ('SOME PROBLEM IN READING THRU THE FILE',e)
+
+   a='\n\n'
+   print(a)
+ 
+   finalvalue=float() 
+   finalvalue=sum(list_spamvalue)  # THIS WILL ADD ALL THE LIST ELEMENTS WHICH ARE FLOAT NO's
+   print("THE TOTAL SPAMVALUE FOR X-DSPAM-Confidence:",finalvalue)
+
+   print ("NO OF TIMES X-DSPAM-Confidence: APPEARS IN FILE IS:",cnt)
+   fhand.close() 
+else:
+   print("ENTERED WRONG FILENAME")
+

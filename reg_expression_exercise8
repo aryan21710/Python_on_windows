@@ -1,0 +1,40 @@
+#!/usr/bin/python
+import re
+'''
+<composer>Wolfgang Amadeus Mozart</composer>
+<author>Samuel Beckett</author>
+<city>London</city>
+
+convert the above text from file reg_expression_file to following
+
+composer: Wolfgang Amadeus Mozart
+author: Samuel Beckett
+city: London
+
+'''
+
+fname='reg_expression_file'
+fhand=open(fname,'r')
+print ('the contents of file are as follows ::')
+for line in fhand:
+    line=line.rstrip()
+    print line
+
+fhand.close()
+fhand=open(fname,'r')
+print (" ")
+finaloutput=[]
+for line in fhand:
+    line=line.rstrip()
+    line=line.lower()
+    
+    if re.search('(.*)(\>)(.*)(\<)',line):    
+       print "pass"
+       output=re.search('([a-z]+)\>(.*)\<',line)
+       print ('output.group1',output.group(1))
+       print ('output.group2',output.group(2))
+       finaloutput.append(output.group(1)+": "+output.group(2))
+    else:
+       print "fail"
+print (" ")
+print (finaloutput)

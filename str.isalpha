@@ -1,0 +1,65 @@
+#!/usr/bin/python
+
+# STR.ISALPHA: This method returns true if all characters in the string are alphanumeric and there is at least one character, false otherwise
+
+##### IF THE STRING CONTAINS ANY OF THE THE FOLLOWING CHAR (A-Z0-9a-z) THEN ITS ALPHANUMERIC. IF STRING CONTAINS ANY SPACES OR TABS OR ANY OTHER SPECIAL CHAR LIKE $,%,@,# THEN ITS NOT###################
+
+input = raw_input("PLEASE ENTER ANY STRING OF YOUR CHOICE:::")
+
+alpha=['A','B','C','D','E','F','G','H','I','K','L','M','N','O','P','Q','R','S','T','U',
+            'V','W','X','Y','Z','a','b','c','d','e','f','g','h','i','j','k','l','m','n','o',
+             'p','q','r','s','t','u','v','w','z','y','z','0','1','2','3','4','5','6','7','8','9']
+
+count=0
+print ("input string entered and its length is", input , len(input))
+
+for i in range(len(input)):
+    if count >=  0 and (i < len(input)-1):
+          print ("VALUE OF COUNT IS", count)
+          for j in range(len(alpha)):
+              if input[i] == alpha[j]:
+                 print("MATCH::CHARACTER AT ith ITERATION" , i, input[i])
+                 count=count+1
+                 break
+              elif j == (len(alpha)-1) and (input[i] != alpha[j]):
+                 count=-1  
+                 print("MARKING COUNT AS -1")
+                 break    
+              elif (input[i] != alpha[j]) and (j != (len(alpha)-1)):
+                 print("NO MATCH AT ITERATION NOW",j,input[i])
+                 continue
+              elif (input[i] == alpha[j]) and (j == (len(alpha)-1)):
+                 print("SCANNED WHOLE LIST OF ALPHA CHAR. MOVING TO NEXT CHAR OF INPUT STRING")
+                 count=count+1
+                 continue
+    elif count < 0:
+        print("""
+               CHARACTER DIDNT MATCH ANY ALPHANUMERIC CHAR'S. 
+               STRING CONTAINS NON ALHPA CHAR .
+              """,input[i]) 
+        print("FAILING THE SCRIPT")
+        break
+    elif count > 0 and (i == len(input)-1):
+        print("PASSING THE SCRIPT, NO NONALPHA CHAR FOUND IN THE SCRIPT")
+    elif count >=  0 and (i == len(input)-1):
+        print ("VALUE OF COUNT IS", count)
+        for j in range(len(alpha)):
+              if input[i] == alpha[j]:
+                 print("MATCH::CHARACTER AT ith ITERATION" , i, input[i])
+                 count=count+1
+                 print("PASSING THE SCRIPT, NO NONALPHA CHAR FOUND IN THE SCRIPT")
+                 break
+              elif j == (len(alpha)-1) and (input[i] != alpha[j]):
+                 count=-1  
+                 print("MARKING COUNT AS -1")
+                 print("FAILING THE SCRIPT")
+                 break    
+              elif (input[i] != alpha[j]) and (j != (len(alpha)-1)):
+                 print("NO MATCH AT ITERATION NOW",j,input[i])
+                 continue
+              elif (input[i] == alpha[j]) and (j == (len(alpha)-1)):
+                 print("SCANNED WHOLE LIST OF ALPHA CHAR. MOVING TO NEXT CHAR OF INPUT STRING")
+                 count=count+1
+                 continue
+    else:
+        print("COUNT IS STILL 0, SCRIPT DINT ENTER THE FOR LOOP")

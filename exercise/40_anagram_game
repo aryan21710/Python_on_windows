@@ -1,0 +1,68 @@
+#!/usr/bin/pyhton
+import random
+
+'''
+An anagram is a type of word play, the result of rearranging the letters of a word or phrase to produce a new word or phrase, using all the original letters exactly once; e.g., orchestra = carthorse, A decimal point = I'm a dot in place. Write a Python program that, when started 1) randomly picks a word w from given list of words, 2) randomly permutes w (thus creating an anagram of w), 3) presents the anagram to the user, and 4) enters an interactive loop in which the user is invited to guess the original word. It may be a good idea to work with (say) colour words only. The interaction with the program may look like so:
+
+>>> import anagram
+Colour word anagram: onwbr
+Guess the colour word!
+black
+Guess the colour word!
+brown
+Correct!
+'''
+
+color_lst=['amber','blue','coral','crimson','golden','green','lemon','lime','magenta','peach','silver','brown']
+
+color1=random.choice(color_lst)
+input=""
+color=list(color1)
+jum_lst=[]
+for i in range(len(color)):
+    x=random.choice(color)
+    jum_lst.append(x)
+    color.remove(x)
+
+jum_color=""       
+for i in range(len(jum_lst)):
+    jum_color=jum_color+jum_lst[i]
+
+
+print ('COLOR WORD ANAGRAM IS::',jum_color)
+
+input=""
+d=""
+y=10
+for x in range(1,y):
+    prompt='GUESS THE COLOR WORD::\n'
+    input=raw_input(prompt)
+    input=input.rstrip()
+    jum_color=jum_color.rstrip()
+    if d != input:
+       for i in range(len(input)):
+#          print ('*********************************')
+           if input != 'EXIT':
+               if len(input)==len(jum_color):
+                   for j in range(len(jum_color)):
+#                      print ('COMPARING', input[i], 'AND',jum_color[j])
+                       if jum_color[j]==input[i]:
+                          d=d+jum_color[j]
+#                         print ('match',d)
+                          break
+               else:       
+                   continue
+           else:
+              y=x
+       if d==input:
+          print ('CORRECT',d)
+          break
+       else:
+          continue
+    else:
+       print ('CORRECT!')
+       break
+     
+
+ 
+

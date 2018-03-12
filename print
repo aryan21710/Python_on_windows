@@ -1,0 +1,48 @@
+#!/usr/bin/python
+
+
+# THIS PROGRAM WILL PRINT SENTENCES SPANNED OVER 2 LINES INTO 1 LINE
+
+
+print ("THIS IS THE FIRST LONG LINE WHICH WILL ROLLED ON TO SECOND LINE" + \
+       "this is the second line. The output should be printed in 1 line")
+
+
+
+print ("""
+         THIS IS THE FIRST LONG LINE WHICH WILL ROLLED ON TO SECOND LINE.
+         this is the second line. The output should be printed in 1 line.
+       """)
+
+x=2
+y=2
+cnt=5
+count=0 
+z=0
+for i in range(cnt):
+    if cnt > 0:
+       z=z+x+y
+       cnt=cnt-1
+       count=count+1
+    else:
+       break
+
+print ("x and y added together", count, "times and the output was", z) 
+
+a="aryan"
+a1="ryan"
+
+inp='STRING a is::-'+ '\t' +a + '\n' + 'STRING a1 is::-'+ a1
+print inp          # CHECK HOW THIS IS PRINTED.
+
+
+
+
+para_str = """this is a long string that is made up of
+several lines and non-printable characters such as
+TAB ( \t ) and they will show up that way when displayed.
+NEWLINEs within the string, whether explicitly given like
+this within the brackets [ \n ], or just a NEWLINE within
+the variable assignment will also show up.
+"""
+print ("para_str printed across multiple lines is",para_str)

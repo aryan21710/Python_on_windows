@@ -1,0 +1,30 @@
+#!/usr/bin/python
+
+
+text="this is fun"
+'''
+output='tthhiss iss ffunn'
+output2='tothohisos isos fofunon'
+'''
+
+output=""
+d=""
+for i in text:
+    if (i != 'a|i|e|o|u'):
+       output=output+(i*2)
+    else:
+       print ('i is:',i)
+       output=output+i
+print('THE OUTPUT IS :',output) 
+print('d is',d)
+
+
+'''
+vowel=['a','e','i','o','u']
+for i in text:
+    if i in vowel:
+       output=output+i;
+    else:
+       output=output+(i*2)
+print('THE OUTPUT IS :',output) 
+'''

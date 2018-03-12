@@ -1,0 +1,37 @@
+#!/usr/bin/python
+
+a="this is a test string program and this has spaces in it"
+a1="thisisateststringprogramandandthisHASNOWITHOUTanyspaces"
+
+print ("########################################")
+print ("THIS PROGRAM WILL CHECK WHETHER BLANK SPACES")
+print (" ARE PRESENT IN THE STRING OR NOT")
+print ("########################################")
+print ("\n")
+
+inp='STRING a is::-'+ '\t' +a + '\n' + 'STRING a1 is::-'+ a1
+print inp
+str1=raw_input('PLEASE ENTER WHICH STRING YOU WANT TO TEST a or a1::')
+substr1=raw_input("PLEASE ENTER WHAT YOU PATTERN U WANT TO SEARCH IN THE STRING::")
+
+str1.strip() # REMOVE THE BLANKSPACES FROM STR1 WHICH MIGHT BE ENTERED BY USER BY MISTAKE
+substr1.strip() # REMOVE THE BLANKSPACES FROM STR1 WHICH MIGHT BE ENTERED BY USER BY MISTAKE
+
+print("substr1 %s needs to be searched in str1 %s" %(substr1,str1) + "::" + str1,substr1)
+
+if str1=='a':   # if str1==a will not work as a is entered by user, so its a string.
+   str2="this is a test string program and this has spaces in it"
+   if substr1 in str2:
+      print ('%s HAS %s IN IT::TRUE' %(str2,substr1))
+   else:
+      print ('%s DOESNT HAVE %s IN IT::FALSE' %(str2,substr1))
+
+elif str1=='a1':
+   str2="this is a test string program and this has spaces in it"
+   if substr1 in str2:
+      print ('%s HAS %s IN IT::TRUE' %(str2,substr1))
+   else:
+      print ('%s DOESNT HAVE %s IN IT::FALSE' %(str2,substr1))
+
+else:
+   print ("SOME PROBLEM WITH THE IF ELSE LOOP") 

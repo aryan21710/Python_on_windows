@@ -1,0 +1,9 @@
+#!/usr/bin/python
+'''
+Assuming that we have some email addresses in the "username@companyname.com" format, please write program to print the user name of a given email address. Both user names and company names are composed of letters only.
+'''
+
+input='aryan.sharma@gmail.com'
+
+input=input.split('@')
+print input[0]

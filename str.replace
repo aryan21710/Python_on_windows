@@ -1,0 +1,43 @@
+#!/usr/bin/python
+
+### INCOMPLETE
+#STR.REPLACE :- THIS REPLACES A CHAR AT A PARTICULAR INDEX IN A STRING.
+
+###### Example
+
+# str = "this is string example....wow!!! this is really string";
+# print str.replace("is", "was");
+# print str.replace("is", "was", 3);
+# When we run above program, it produces following result 
+# thwas was string example....wow!!! thwas was really string
+# thwas was string example....wow!!! thwas is really string
+
+def str_to_list(str1):
+    l=[]
+    print ("THE STRING PASSED TO str_to_list function is" ,str1)
+    for j in range(len(str1)):
+        l.append(str1[j])
+    return l
+
+
+def replace(l,old_str1='is',new_str2='was'):
+    print ("""
+             THE STRING IS str and the old substring which will be replaced is
+             str1 . The new substring which will replace the old substring is
+             str2.
+            """, l, old_str1, new_str2)
+
+    for j in range(len(old_str1)):         
+        for i in range(len(l)):
+            if old_str[i]==l[j]
+               continue   
+
+string1=raw_input("PLEASE ENTER ANY STRING OF YOUR CHOICE:::")
+
+
+print ("the string entered is " ,str_to_list(string1))
+
+
+#print ("""
+#          Calling the replace function now
+#       """, replace("this is string example...wow!! this is really a string", old_str1="is", new_str2="w       as"))

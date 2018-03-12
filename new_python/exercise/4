@@ -1,0 +1,30 @@
+#!/usr/input/python
+import sys
+
+'''
+Write a function that takes a character (i.e. a string of length 1) and returns True if it is a vowel, False otherwise.
+'''
+
+def vowel_or_not(x):
+    vowel=['a','e','i','o','u']
+    if x in vowel:
+       return 1
+    else:
+       return 0  
+
+
+
+prompt='ENTER A CHARACTER :\n'
+x=raw_input(prompt)
+if (len(x) == 1):
+   if (x.isalpha()):
+      output=vowel_or_not(x)
+      if(output):
+        print ("VOWEL");
+      else:
+        print ("NOT VOWEL");
+   else:  
+      print("PLEASE ENTER A CHAR AND NOT INTEGER:\n")
+else:
+   print('ENTER ONLY 1 CHAR AND NOT MORE:\n') 
+

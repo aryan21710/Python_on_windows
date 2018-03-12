@@ -1,0 +1,52 @@
+#!/usr/bin/python
+
+import random
+
+'''
+Write a program able to play the "Guess the number"-game, where the number to be guessed is randomly chosen between 1 and 20. (Source: http://inventwithpython.com) This is how it should work when run in a terminal:
+
+>>> import guess_number
+Hello! What is your name?
+Torbjorn
+Well, Torbjorn, I am thinking of a number between 1 and 20.
+Take a guess.
+10
+Your guess is too low.
+Take a guess.
+15
+Your guess is too low.
+Take a guess.
+18
+Good job, Torbjorn! You guessed my number in 3 guesses!
+'''
+
+prompt='Hello! What is your name?\n'
+name=raw_input(prompt)
+prompt='Well, ' + name + ', LETS PLAY A GUESSING NUMBER GAME.'
+input=raw_input(prompt)
+prompt='ONLY ENTER A NUMBER WHICH IS BETWEEN 1 AND 20\n'
+input=raw_input(prompt)
+no_of_guesses=4
+flag=0
+number=random.randint(1,20)
+while (no_of_guesses > 0):
+      prompt='Take a guess & enter a number.\n'
+      input=raw_input(prompt)
+      input=int(input)
+      
+      if (input > number and input < 20):
+         print('YOUR GUESS IS TOO HIGH. TRY AGAIN.',no_of_guesses,' CHANCES LEFT')
+      elif (input == number):
+         print('GOOD JOB', name,'! You guessed my number in 4 guesses!')
+         flag=1
+         break
+      elif (input > number and input > 20):
+         print ('OOPS: PLEASE ENTER A NUMBER BETWEEN 1 AND 20 ')
+      else:
+         print('YOUR GUESS IS TOO LOW. TRY AGAIN.',no_of_guesses,' CHANCES LEFT')
+      no_of_guesses=no_of_guesses-1
+
+
+if (flag == 0):
+   print('BETTER LUCK NEXT TIME')
+   print ('THE NUMBER YOU WERE SUPPOSED TO GUESS WAS:',number)

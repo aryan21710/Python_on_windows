@@ -1,0 +1,11 @@
+#!/usr/bin/python
+
+from datetime import datetime
+now = datetime.now()
+print now
+print now.year
+print now.month
+print now.day
+print now.time
+
+print('day is %d month is %d and year is %d' %(now.day,now.month,now.year))

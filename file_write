@@ -1,0 +1,35 @@
+#!/usr/bin/python
+import sys
+
+# KEEP TAKING THE INPUT FROM USER AND KEEP ENTERING IN THE FILE. ONCE USER TYPES EXIT, THEN STOP TAKING INPUT FROM USER.
+
+
+
+fhand=open('testfile','w')
+line=""
+line1=""
+while not line.count('exit'):
+          line=raw_input("ENTER TEXT TILL U ENTER exit:::\n")
+          line1=line1+line
+          
+print ("line1 is ", line1)
+fhand.write(line1)
+fhand.close() # IF YOU DONT CLOSE THE FILE, WHEN YOU OPEN IT FOR READING, IT WILL START FROM NEWLINE WHERE THERE IS NO TEXT
+
+# LETS READ THE CONTENTS OF THE FILE
+print ("PRINTING THE CONTENTS OF THE FILE NOW")
+fhand1=open('testfile','r')
+print fhand1
+try:
+ #  a=fhand1.read()
+ #  print ("a is ",a) # ONCE FILE IS READ USING FHAND, THE HANDLE TO FILE MOVES TO NEXT LINE. IF YOU 
+                      # TRY READING THE SAME FILE AGAIN USING FOR LOOP, THEN IF WONT GET ANYTHING AS
+                      # a=fhand1.read moved to fhand to END OF LINE.
+   for l in fhand1:
+       print ("l is ",l)
+   fhand.close()
+except:
+      e=sys.exc_info()[0]
+      print ("THE ISSUE IS ", e)
+
+

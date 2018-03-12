@@ -1,0 +1,18 @@
+#!/usr/bin/python
+
+
+"""
+Use find and string slicing to extract the portion of the string after the colon character and then use the float function to convert the extracted string into a floating point number.
+"""
+str1 = 'X-DSPAM-Confidence: 0.8475'
+
+index=str1.find(' ')
+print ('index is',index)
+str2=str1[index+1:]
+print ('str2 is',str2)
+str2=str2.strip()
+output=float(str2)
+
+print ('the final output is::',output)
+
+

@@ -1,0 +1,32 @@
+
+
+'''
+Define a function is_palindrome() that recognizes palindromes (i.e. words that look the same written backwards). For example, is_palindrome("radar") should return True.
+'''
+
+
+def palin(string):
+    str2=""
+    for i in range(len(string)):
+        str2=str2+string[(len(string)-1)-i]
+
+    print ("THE REVERSE OF THE STRING IS:", str2) 
+
+    if str2==string:
+       print ("PALINDROME")
+    else:
+       print ("NOT PALINDROME")
+
+  
+
+
+prompt="enter a string::\n"
+
+input=raw_input(prompt)
+
+print ('the string entered by user is::', input)
+input=input.rstrip()
+
+output=palin(input)
+
+

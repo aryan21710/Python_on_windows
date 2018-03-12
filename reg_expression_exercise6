@@ -1,0 +1,26 @@
+#!/usr/bin/python
+'''
+REGEXP TO VERIFY ANY VALID INDIAN ADDRESS WHICH ENDS WITH A VALID 6 DIGIT POSTAL CODE
+'''
+
+import re
+
+prompt="ENTER AN ADDRESS FOLLOWED BY A POSTAL CODE::\n"
+addr=raw_input(prompt)
+
+if re.search('^[A-Za-z]+.*[0-9]{6}$',addr):
+   print "pass"
+else:
+   print "fail"
+
+addr=addr.rstrip()
+print (' THE ADDR IS ::\n',addr)
+if re.search('[0-9]+',addr):
+   output=re.search('[0-9]+',addr)
+   print ('THE OUTPUT IS', output)
+   print ('output.group',output.group())
+   print ('output.start',output.start())
+   print ('output.end',output.end())
+   print ('output.span',output.span())
+else:
+   print ('FAIL')

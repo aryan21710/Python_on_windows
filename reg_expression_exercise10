@@ -1,0 +1,24 @@
+#!/usr/bin/python
+import re
+
+
+s = "Sun Oct 14 13:47:03 CEST 2012"
+print ('THE TIME IS',s)
+'''
+expr=".*(\d\d):([0-9]{2}):(\d\d).*"
+
+output=re.search(expr,s)
+
+print ("hours is", output.group(1))
+print ("minutes is", output.group(2))
+print ("seconds is", output.group(3))
+'''
+#### METHOD 2##
+
+expr=".*(?P<hours>\d\d):(?P<minutes>[0-9]{2}):(?P<seconds>\d\d).*"
+output=re.search(expr,s)
+print ("hours is", output.group('hours'))
+print ("minutes is", output.group('minutes'))
+print ("seconds is", output.group('seconds'))
+print (output.start('minutes'))
+print (output.end('minutes'))

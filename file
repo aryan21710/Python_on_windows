@@ -1,0 +1,116 @@
+#!/usr/bin/python
+
+###########################################################################
+# 1] OPENING THE FILE
+
+
+fhand=open('list_usage')
+
+# IF OPENING A FILE IS SUCCESSFULL, fhand returns the handle to the file . IF OPENING A FILE FAILS THEN IT RETURNS TRACEBACK ERROR.
+
+print (fhand)
+# OUTPUT OF fhand
+
+# <open file 'list_usage', mode 'r' at 0x10f1ad6f0>
+
+# print ("fhand") # WRONG::fhand is not a var string so dont enclose it in quotes. Its a var.
+
+
+###########################################################################
+# 2] LINE BY LINE READING THE FILE and PRINT ITS CONTENTS AND NO OF LINES IN A FILE
+count=0
+
+#for each line in the file represented by the file handle fhand, add one to the count variable. You need to open the file first to get its file handle.
+
+for line in fhand:  # Here line is a string var. So all string operations work on it.
+    count=count+1
+
+print ("no of lines in file is ",count)
+
+###########################################################################
+# 3] READING THE FILE USING READ. ONLY USEDFUL WHEN FILE IS NOT BIG. FILE CONTENTS IS STORED IN A STRING
+
+fhand=open('list_usage')
+
+# STORING THE ENTIRE FILE CONTENTS IN A STRING
+
+inp = fhand.read()
+
+# PRINTING THE LENGTH OF FILE 
+print ("length of the file is ",len(inp))
+
+# PRINTING ALL THE CONTENTS OF THE FILE WHICH IS STORED IN A STRING. DONT TRY THIS WHEN FILE IS TOO BIG . THAT TIME USE FOR LOOP AND PRINT FILE LINE BY LINE.
+
+print ("FILE CONTENTS PRINTED USING A STRING",inp[:])
+
+###########################################################################
+# 4] SEARCHING THROUGH THE FILE. AND PRINTING ALL THE LINES WHICH HAS "name" char in it.
+
+f1=open('list_usage')
+cnt=0
+for l1 in f1:
+    # READING THE CONTENTS OF FILE, LINE BY LINE
+
+    if l1.count('name'):
+       cnt=cnt+1
+       print ("NAME FOUND FOR THE %dth TIME and LINE IS " %cnt, l1)
+    else:
+       continue
+    
+###########################################################################
+# 5] SEARCHING THROUGH THE FILE AND PRINTING NO OF TIMES "name" char is present. Its different than the earlier one. As THE 1ST ONE PRINTS NO OF LINES IN WHICH name APPEARS. IF name appears 3 time in a line, it will still print 1
+
+f1=open('list_usage')
+cnt=0
+ntcnt=0
+l1=""
+inp=f1.read() # THIS WILL STORE THE WHOLE FILE INTO A STRING. STRING IS 3K CHAR LONG
+inp2=inp.split("\n") # THIS WILL SEPARATE THE STRING INTO SEPARATE LINES SPLITTED OVER \n
+print ("inp2 is ")
+print ('\n')
+print('\n')
+#print( inp2, len(inp2)) 
+for l1 in range(len(inp2)): # THIS WILL LOOP OVER EACH LINE OF THE STRING
+     if inp2[l1].count('name'): # FIND CHAR "name" IN EVERY STRING LINES
+        print ("OUTPUT:::", inp2[l1],inp2[l1].count('name')) # PRINTS EVERY LINE WHEREVER "name" found
+        cnt=cnt+inp2[l1].count('name') #inp2[l1].count('name') RETURNS NO OF TIMES name is found in each line
+     else:
+        ntcnt=ntcnt+1
+        continue
+
+
+print("name found for the %dth time and not found for %d time" %(cnt,ntcnt) )
+###########################################################################
+# TRY AND EXCEPT: EXCEPTION HANDLING
+#6] rstrip method : WHENEVER WE HAVE PRINT IN A LOOP, PRINT ALWAYS PRINT THE OUTPUT IN EVERY ITERATION AND ENTERS A BLANK NEWLINE BY DEFAULT. TO AVOID THAT EXTRA LINE, WE CAN RSTRIP WHICH WILL STRIP THE BLANK LINE ENTERED BY PRINT STATEMENT.
+
+fname=raw_input("PLEASE ENTER A VALID FILE NAME WHICH BELONGS TO THE SAME DIR:::")
+
+try:
+   fhand = open(fname)
+   print ("*****RSTRIP METHOD****")
+   for line in fhand:
+       line=line.rstrip()
+       print line
+except IOError,e: 
+    print ("NOT A VALID FILE NAME",e)
+
+fhand.close() # ALWAYS CLOSE THE FILE WHICH IS OPENED EARLIER.
+###########################################################################
+
+# 7a] WRITING TO A NEW FILE.
+
+fhand=open('xyz','w') # TO WRITE TO THE FILE, GIVE w PERMISSION
+print fhand
+line=raw_input("ENTER THE TEXT YOU WANT TO ENTER IN THE FILE FOLLOWED BY \N:::")
+fhand.write(line) 
+fhand=open('xyz','r')
+try:
+   fhand.read() # TO READ THE FILE, U NEED TO GIVE THR r PERMISSION
+   for l in fhand:
+       print ("THE CONTENTS OF THE FILE IS:", l)
+except IOError,e:
+   print ("the issue is ", e)
+
+fhand.close()
+

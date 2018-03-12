@@ -1,0 +1,7 @@
+x = [11, 11, 2, 2, 2, 2, 2, 3, 3]
+y=set(x)
+print y
+set([11, 2, 3])
+
+print sorted(set(x))
+[2,3,11]

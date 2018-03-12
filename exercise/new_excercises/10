@@ -1,0 +1,41 @@
+#!/usr/bin/python
+import re
+'''
+Write a program that accepts a sequence of whitespace separated words as input and prints the words after removing all duplicate words and sorting them alphanumerically.
+Suppose the following input is supplied to the program:
+hello world and practice makes perfect and hello world again
+Then, the output should be:
+again and hello makes perfect practice world
+'''
+
+a="hello world and practice makes perfect and hello world again"
+b=[]
+b=a.split()
+print b
+
+b.sort()
+print b
+
+#### METHOD 1
+c=[]
+for i in range(len(b)):
+    #print b[i]
+    if b[i] not in c:
+       c.append(b[i])
+    else:
+       continue
+
+
+print c
+
+#### METHOD 2
+
+print ('**********METHOD 2*********')
+print ('\n\n')
+
+print b
+
+print list(set(b))
+
+
+

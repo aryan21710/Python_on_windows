@@ -1,0 +1,72 @@
+#!/usr/bin/python
+import sys
+
+'''
+Define a function max() that takes two numbers as arguments and returns the largest of them. Use the if-then-else construct available in Python. (It is true that Python has the max() function built in, but writing it yourself is nevertheless a good exercise.)
+'''
+
+def max_number(no1):
+
+    print ('INSIDE THE FUNCTION NOW, THE LIST IS', no1)
+    largest=0
+    for i in range(len(no1)):
+
+        if no1[i] > largest:    
+           largest=no1[i]
+    
+    return largest       
+
+
+'''
+
+prompt="ENTER THE 1ST NO::\n"
+lst=[]
+lst.append(raw_input(prompt))
+prompt='Enter the 2nd no::\n'
+lst.append(raw_input(prompt))
+print ("THE NO'S ENTERED BY USER ARE::", lst)
+try:
+      no1=int(lst[0])
+      no2=int(lst[1])
+      print (type(no1),type(no2))
+      print (no1,no2, 'ARE  INTEGER NUMBERS')
+      largest=max_number(no1,no2)
+      print ('THE LARGEST AMONGST' , no1,no2, 'IS', largest) 
+except:
+
+   e=sys.exc_info()[0]
+   print ('ERROR', e) 
+
+'''
+
+prompt=''
+lst=[]
+while "TRUE":
+
+      prompt="ENTER THE NO::\n"
+      input=raw_input(prompt)
+      if input != 'done':
+         lst.append(input)
+      else:
+         break 
+    
+print ("THE NO'S ENTERED BY USER ARE::", lst)
+
+validlst=[]
+for i in range(len(lst)):
+    try:
+       no=int(lst[i])
+       print ('THE NO AND ITS TYPE IS', no, type(no))
+       validlst.append(no)
+
+    except:
+
+       e=sys.exc_info()[0]
+       print ('INVALID INPUT', e)   
+
+
+print ("THE VALID NO'S ENTERED BY USER ARE :", validlst)
+
+largest=max_number(validlst)
+print ("THE LARGEST NO ENTERED BY USER IS::", largest)
+

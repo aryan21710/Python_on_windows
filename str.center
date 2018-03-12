@@ -1,0 +1,57 @@
+#/usr/local/python
+
+# Str.center: The method center() returns centered in a string of length width. Padding is done using the specified fillchar. Default filler is a space. 
+
+####### Example of str.center
+# x="aryan"
+# print x
+#aryan
+# x.center(10,'m')
+#mmmmmaryan.
+# Here the total length of the string is made 10, by entering m which is fillchar till the 
+# the lenght of x becomes 10
+
+print ("""
+        Code for str.center which is a function which does following
+        The method center() puts the string in the center of the line
+        {like tab}. It creates more space in the beginning of the line 
+        by either entering the fillchar or when not specified then spaces
+        padding is done using the specified fillchar. Default filler is a space
+       """)
+
+x="this is a test program which is written in python"
+
+lenx=int()
+lenx=len(x)
+print ("""
+         The length of the string x is "%s" 
+       """ %(x) , lenx)
+
+width=int(raw_input("""
+                      Please enter the new width of the string. It needs to be 
+                      more than original length of string x %d
+                    """ %lenx))
+fillchar={} 
+fillchar=str(raw_input("Please enter the fillchar which will extend the length of string to width:::"))
+
+print (""" 
+        the new width of the string is %d and
+        the fillchar which will be used to increase
+        the length of the string is %s
+       """ %(width,fillchar))
+
+newx={}
+if width > lenx:
+   print("no of times fillchar needs to be appended is:",width-lenx)
+   for i in range(width-lenx):
+#       newx=newx+fillchar
+        newx=fillchar * int(width-lenx)
+else:
+   print ("the new width %d entered is same or less than the actual length of the string %d Terminating the program now" %(width,lenx)) 
+   news={}
+
+if len(newx) == 0:
+   print "EXITING THE PROGRAM SINCE USER INPUT IS WRONG"
+else:
+   newx=newx+x
+   print("THE FINAL OUTPUT OF STR.CENTER IS AND NEW LENTH OF STRING IS", newx,len(newx))

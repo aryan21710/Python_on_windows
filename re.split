@@ -1,0 +1,11 @@
+#!/usr/bin/python 
+import re
+
+
+lines = ["surname: Obama, prename: Barack, profession: president", "surname: Merkel, prename: Angela, profession: chancellor"]
+
+
+
+for line in lines:
+    x=re.findall(r'([A-Z][a-z]+)',line)
+    print (x)

@@ -1,0 +1,20 @@
+#!/usr/bin/python
+import re
+
+'''
+There are some people with the surname Neu. We are looking for a Neu, but we don't know the first name, we just know that it starts with a J. Let's write a Python script, which finds all the lines of the phone book, which contain a person with the described surname and a first name starting with J.
+'''
+
+prompt="Enter a Name in which firstname starts with J and lastname is Neu::\n"
+name=raw_input(prompt)
+name=name.rstrip()
+
+print ('THE NAME ENTERED BY USER IS::',name)
+
+
+if re.search('^[Jj].*[Nn]eu$',name):
+
+   print ('REGEXP MATCHED')
+else:
+
+   print ('REGEXP FAILED')

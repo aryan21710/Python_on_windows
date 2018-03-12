@@ -1,0 +1,55 @@
+#!/usr/bin/python
+import random
+'''
+in a game of Lingo, there is a hidden word, five characters long. The object of the game is to find this word by guessing, and in return receive two kinds of clues: 1) the characters that are fully correct, with respect to identity as well as to position, and 2) the characters that are indeed present in the word, but which are placed in the wrong position. Write a program with which one can play Lingo. Use square brackets to mark characters correct in the sense of 1), and ordinary parentheses to mark characters correct in the sense of 2). Assuming, for example, that the program conceals the word "tiger", you should be able to interact with it in the following way:
+
+
+>>> import lingo
+snake
+Clue: snak(e)
+fiest
+Clue: f[i](e)s(t)
+times
+Clue: [t][i]m[e]s
+tiger
+Clue: [t][i][g][e][r]
+'''
+
+fhand=open('5letter_word_file','r')
+lst=[]
+for line in fhand:
+    line=line.rstrip()
+    lst.append(line)
+
+
+word=random.choice(lst)
+print ('THE WORD IS:',word)
+clue1='CLUE:' + word[0]
+print clue1
+for i in range(len(word)):
+    attempt=i+1
+    prompt='ATTEMPT'+str(attempt)+':-ENTER ANY 5 LETTER WORD::'
+    input=raw_input(prompt)
+    input=input.rstrip()
+    clue=""
+
+    for j in range(len(input)):
+        if input[j] in word and input.index(input[j],j)==word.index(input[j]):
+           # alpha='['+t+']'
+           clue=clue+'['+input[j]+']'
+
+        elif input[j] in word and input.index(input[j])!=word.index(input[j]):
+           # alpha='('+t+')' 
+           clue=clue+'('+input[j]+')' 
+
+
+
+        else:
+           # alpha=t
+           clue=clue+input[j] 
+
+
+    print ('CLUE:',clue)
+
+
+         

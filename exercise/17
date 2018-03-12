@@ -1,0 +1,38 @@
+#!/usr/bin/python
+
+
+'''
+Write a version of a palindrome recognizer that also accepts phrase palindromes such as "Go hang a salami I'm a lasagna hog.", "Was it a rat I saw?", "Step on no pets", "Sit on a potato pan, Otis", "Lisa Bonet ate no basil", "Satan, oscillate my metallic sonatas", "I roamed under it as a tired nude Maori", "Rise to vote sir", or the exclamation "Dammit, I'm mad!". Note that punctuation, capitalization, and spacing are usually ignored.
+'''
+
+prompt='ENTER A PALINDROM PHRASE OR A WORD::\n'
+input=raw_input(prompt)
+input=input.lower()
+lst=input.split()
+newstr=""
+newstr1=""
+punc=[',','.','-','+','"','?',"'"]
+for i in lst:
+       newstr1=newstr1+i
+print ('1 newstr is',newstr1)
+for i in newstr1:
+
+    if i in punc:
+       continue
+    else:
+       newstr=newstr+i
+res=""
+print ('2 newstr is',newstr)
+for i in range(len(newstr)):
+       res=res+newstr[(len(newstr)-1)-i]
+    
+print ('res is',res)
+res=res.rstrip()
+newstr=newstr.rstrip()
+if newstr==res:
+
+   print ('PALINDROME')
+else:
+ 
+   print ('NOT PALINDROME')
+

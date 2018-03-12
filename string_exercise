@@ -1,0 +1,13 @@
+#!/usr/bin/python
+
+prompt=""
+prompt='ENTER A STRING\n'
+string=raw_input(prompt)
+leng=len(string)
+print ('THE STRING ENTERED IS',string,'AND THE LENGTH OF STRING IS',leng)
+
+for i in range(leng):
+    print (string[leng-(i+1)])
+  
+
+

@@ -1,0 +1,62 @@
+#!/usr/bin/python
+import re
+
+'''
+Rearranging the following list into another list using regexp and groups.
+
+input=  ["555-8396 Neu, Allison", 
+     "Burns, C. Montgomery", 
+     "555-5299 Putz, Lionel",
+     "555-7334 Simpson, Homer Jay"]
+
+output = Allison Neu 555-8396
+         C. Montgomery Burns 
+	 Lionel Putz 555-5299
+	 Homer Jay Simpson 555-7334
+'''
+ 
+input= ["555-8396 Neu, Allison",
+     "Burns, C. Montgomery",
+     "555-5299 Putz, Lionel",
+     "555-7334 Simpson, Homer Jay"]
+
+expoutput="Allison Neu 555-8396 \
+         C. Montgomery Burns \
+         Lionel Putz 555-5299 \
+         Homer Jay Simpson 555-7334"
+
+'''
+print (expoutput)
+print(" ")
+finalout=""
+finalout1=""
+lst=[]
+for i in range(len(input)):
+
+    if re.search('([0-9]{3}\-[0-9]{4})\s+([a-zA-Z]+\,)\s+([a-zA-Z]+\.?)',input[i]): 
+       output=re.search('([0-9]{3}\-[0-9]{4})\s+([a-zA-Z]+)\,\s+(.*)',input[i])
+       print ('output.group1 which is PHONE NO',output.group(1))
+       print ('output.group2 which is LASTNAME ',output.group(2))
+       print ('output.group3 which is FIRSTNAME',output.group(3))
+       finalout=finalout+" "+output.group(3)+" "+output.group(2)+" "+output.group(1)
+       lst.append(finalout)
+       finalout=""
+    elif re.search('([a-zA-Z]+)\,\s+([a-zA-Z]+\.?\s+.*)',input[i]):
+       out=re.search('([a-zA-Z]+)\,\s+([a-zA-Z]+\.?\s+.*)',input[i])
+       print ('IN ELIF CODE FOR', input[i])
+       print ('out.group1 which is FIRSTNAME',out.group(1))
+       print ('out.group2 which is LASTNAME',out.group(2))
+       finalout1=finalout1+" "+out.group(2)+" "+out.group(1)
+       lst.append(finalout1)
+       finalout1=""
+
+
+
+print ("******")
+print (lst)
+print ("******")
+'''
+
+for i in input:
+    res = re.search(r"([0-9-]*)\s*([A-Za-z]+),\s+(.*)", i)
+    print res.group(3) + " " + res.group(2) + " " + res.group(1)

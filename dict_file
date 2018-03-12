@@ -1,0 +1,85 @@
+#!/usr/bin/python
+
+#Write a Python program to read through the lines of the file, break each line into a list of words, and then loop through each of the words in the line and count each word using a dictionary.
+
+# Use file dict_file_reference
+
+fhand=open('dict_file_reference', 'r')
+
+list1,list2=[],[]
+list2=[]
+i=0
+for line in fhand:
+    print ("len(line) and line are ::",len(line), line)
+    line=line.split()
+    print ("after split len(line) and line is::", len(line),line) 
+    for i in range(len(line)):
+        x=line[i]
+        print ("x and i ::", x,i)
+        list1.append(x)
+    
+
+print ("THE LENGTH OF THE LIST AND ITS CONTENTS ARE ::", len(list1), list1)
+
+dict={}
+"""
+
+# THE FOLLOWING CODE WILL CONVERT THE LIST INTO A DICT AND PRINT THE DICT AND ITS KEYS IN RAW FORMAT. THATS NOT WE WANT
+
+for i in range(len(list1)):
+  
+    dict[i]=list1[i] 
+   
+
+print ("THE DICT IS IN RAW FORMAT:::", dict)    
+
+print ("THIS IS HOW YOU SHOULD LOOP OVER THE DICT USING FOR LOOP:::")
+
+for key in dict:
+
+    print ("keys and its respective values::", key, dict[key])
+
+
+"""
+count=1
+leng=len(list1)
+key1=[]
+print ("length of list1 is:", leng)
+
+for i in range(len(list1)):
+    if list1[i] not in key1:
+    
+       count=1    
+       j=i+1
+       while (j < leng):
+   #          print ("i and j,list1[i] , list1[j]", i, j, list1[i], list1[j])   
+             key=list1[i] 
+             if list1[i]==list1[j]:
+    #            print ("***********MATCH FOUND FOR ",list1[j])
+                count=count+1 
+                key1.append(list1[i])
+                key=list1[i] 
+                dict[key]=count
+    #            print ("1:key, list1[i], list1[j],and count is", key, list1[i], list1[j],count)
+                j=j+1
+             else:
+                j=j+1
+       dict[key]=count
+    else:
+    #    print ("list1[1] is in key1", list1[i])
+        continue
+        
+count=1
+key=list1[i] 
+dict[key]=count
+print ("######################")
+#print (key, "APPEARED",dict[key], "TIMES")
+print ("######################")
+
+print("PRINTING THE DICTIONARY WITH ITS KEY AND NUMBER OF TIMES THE KEY APPEARED IN DICTIONARY AS ITS VALUE")
+print ("THE DICTIONARY IS:::", dict)
+ 
+  
+    
+
+     

@@ -1,0 +1,132 @@
+# THIS FILE SHOWS BASIC USAGE OF DICTIONARY
+
+>>> dict1['boy']='aryan'
+>>> dict1['girl']='sim'
+>>> print dict1
+{'boy': 'aryan', 'girl': 'sim'}
+>>> dict2={'number': '1234', 'float':'1.234'}
+>>> print dict2
+{'float': '1.234', 'number': '1234'}
+>>> dict2['number']='-2345'
+>>> dict2
+{'float': '1.234', 'number': '-2345'}
+>>> len(dict2)
+2
+>>> '1.234' in dict2    # THIS WONT WORK AS YOU CAN LOOKUP FOR KEYS USING IN KEYWORD IN DICT. NOT VALUES LIKE THIS.
+False
+>>> dict2
+{'float': '1.234', 'number': '-2345'}
+>>> 'float' in dict2
+True
+>>> 'number' in dict2
+True
+>>> x=dict2.values()
+>>> x
+['1.234', '-2345']
+>>> '1.234' in x       # THIS IS HOW YOU LOOK FOR VALUES IN A DICT.
+True
+>>> '2.234' in x
+False
+>>> dict2
+{'float': '1.234', 'number': '-2345'}
+>>> if 'float' in dict2:
+...     print "true"
+... else:
+...     print "false"
+... 
+true
+>>> g='float'
+>>> if g in dict2:
+...     print "true"
+... else:
+...     print "false"
+... 
+true
+>>> if g in dict2.keys():
+...     print "true"
+... else:
+...     print "false"
+... 
+true
+>>> dict2
+{'float': '1.234', 'number': '-2345'}
+>>> test_dict={0: 'aryan', 1: 'sim', 2: 'ryan', 3: 'zx14r', 4: '"aquila gv650 pro"', 5: 'xuv500'}
+>>> print test_dict
+{0: 'aryan', 1: 'sim', 2: 'ryan', 3: 'zx14r', 4: '"aquila gv650 pro"', 5: 'xuv500'}
+>>> if '1' in test_dict:
+...     print "true"
+... else:
+...     print "false"
+... 
+false
+>>> if 1 in test_dict:
+...     print "true"
+... else:
+...     print "false"
+... 
+true
+>>> print i
+aryan
+>>> ('/').join(i)
+'a/r/y/a/n'
+>>> i=1
+>>> ('/').join(i)
+>>> i=str(1)
+>>> ('/').join(i)
+'1'
+>>> i
+'1'
+>>> 
+>>> 
+>>> dict2
+{'float': '1.234', 'number': '-2345'}
+>>>dict2.get('key','default_value')      # SYNTAX TO GET THE VALUE AGAINST A KEY.
+>>> 
+>>> dict2.get('float','random-number')   # THIS IS HOW YOU GET A VALUE AGAINST A PARTICULAR KEY IN DICT.
+'1.234'
+>>> dict2.get('floa','random-number')
+'random-number'
+>>> dict2
+{'float': '1.234', 'number': '-2345'}
+
+############ THIS IS HOW U LOOP OVER A DICT USING FOR LOOP.
+
+test_dict
+{0: 'aryan', 1: 'sim', 2: 'ryan', 3: 'zx14r', 4: '"aquila gv650 pro"', 5: 'xuv500'}
+
+1] RIGHT WAY:-
+
+>>> for key in test_dict:
+...     print ("keys and respective values for that key are ::", key, test_dict[key])
+... 
+('keys and values are ::', 0, 'aryan')
+('keys and values are ::', 1, 'sim')
+('keys and values are ::', 2, 'ryan')
+('keys and values are ::', 3, 'zx14r')
+('keys and values are ::', 4, '"aquila gv650 pro"')
+('keys and values are ::', 5, 'xuv500')
+
+2] WRONG WAY:-
+
+
+>>> for key in test_dict:
+...     print ("keys and values are ::", key, test_dict.values())
+...
+('keys and values are ::', 0, ['aryan', 'sim', 'ryan', 'zx14r', '"aquila gv650 pro"', 'xuv500'])
+('keys and values are ::', 1, ['aryan', 'sim', 'ryan', 'zx14r', '"aquila gv650 pro"', 'xuv500'])
+('keys and values are ::', 2, ['aryan', 'sim', 'ryan', 'zx14r', '"aquila gv650 pro"', 'xuv500'])
+('keys and values are ::', 3, ['aryan', 'sim', 'ryan', 'zx14r', '"aquila gv650 pro"', 'xuv500'])
+('keys and values are ::', 4, ['aryan', 'sim', 'ryan', 'zx14r', '"aquila gv650 pro"', 'xuv500'])
+('keys and values are ::', 5, ['aryan', 'sim', 'ryan', 'zx14r', '"aquila gv650 pro"', 'xuv500'])
+>>>
+
+### THERE IS A DIFFERENCE IN dict.keys() and dict[keys]. dict[keys] works only in for loop iterated over key.
+### OTHERWISE dict[key] will give a syntax error when used without a loop.
+
+print (test_dict.keys())
+[0, 1, 2, 3, 4, 5]
+>>> print (test_dict.values())
+['aryan', 'sim', 'ryan', 'zx14r', '"aquila gv650 pro"', 'xuv500']
+>>> 
+
+

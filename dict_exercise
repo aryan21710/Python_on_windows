@@ -1,0 +1,132 @@
+#!/usr/bin/python
+import sys
+"""
+Write a program to read through a mail log, build a histogram using
+a dictionary to count how many messages have come from each email address,
+and print the dictionary.
+Enter file name: testfile3
+{'gopal.ramasammycook@gmail.com': 1, 'louis@media.berkeley.edu': 3,
+'cwen@iupui.edu': 5, 'antranig@caret.cam.ac.uk': 1,
+'rjlowe@iupui.edu': 2, 'gsilver@umich.edu': 3,
+'david.horwitz@uct.ac.za': 4, 'wagnermr@iupui.edu': 1,
+'zqian@umich.edu': 4, 'stephen.marquard@uct.ac.za': 2,
+'ray@media.berkeley.edu': 1}
+"""
+
+
+filename="testfile3"
+print ("THE INPUT FILE TO THE PROGRAM IS",filename)
+lst=[]
+dict={}
+cnt=0
+cntfrom=0
+try:
+   fhand=open(filename,'r')
+   
+   for line in fhand:
+
+        line=line.rstrip()
+        if "From:" in line:
+            line=line.split()    
+            key=line[1]
+            cntfrom=cntfrom+1
+#            print ("KEY AND LINE AND NUMBER OF TIMES FROM: FOUND", key , line,cntfrom)
+            if line[1] in dict:
+               dict[key]=dict[key]+1
+#               print ("MATCH FOUND for",key, dict[key],"number of times")
+            else:
+                cnt=1
+                dict[key]=cnt
+        else:
+            continue
+             
+
+
+except:
+   e=sys.exc_info()[0]
+   print("ISSUE OPENING THE FILE IS", e)
+
+print ("THE DICTIONARY OF EMAIL SENDER AND THEIR COUNTS ARE", dict)
+
+
+### NOW USE THE MAXIMUM LOOP TO LOOP OVER THE DICTIONARY AND FIND OUT WHO HAS THE MAX NO OF MESSAGES. THE
+### VALUE AGAINST THE KEY WILL TELL YOU WHO HAS MAXIMUM MESSAGES. SO YOU NEED TO COMPARE THE VALUE AGAINST EACH KEY
+### USING THE MAX LOOP TO FIND THE SAME.
+"""
+
+Add code to the above program to figure out who has the most messages
+in the file.
+After all the data has been read and the dictionary has been created, look through
+the dictionary using a maximum loop (see Section 5.7.2) to find who has the most
+messages and print how many messages the person has.
+Enter a file name: testfile3
+cwen@iupui.edu 5
+Enter a file name: testfile3
+zqian@umich.edu 195
+
+"""
+
+# CODE FOR MAXIMUM LOOP
+largest=None
+for key in dict:
+
+    if largest < dict[key] or largest == None :
+       largest=dict[key]
+       i=key
+key=i       
+      
+print ("THE LARGEST KEY BELONGS TO ::",key, "AND ITS", largest)
+
+    
+    
+
+# ALTERNATE METHOD USING MAX KEYWORD 
+
+value=dict.values()
+print ('THE LIST WITH ALL VALUES ARE::', value)
+
+largest=max(value) # FINDS THE MAX NUMBER AMONGST THE SEQUENCES IN A LIST. THIS WORKS ONLY FOR LIST HAVING 
+                   # INTEGER CHAR'S.
+
+for key in dict:
+
+    if largest==dict[key]:
+       i=key
+    else:
+       continue
+
+
+key=i
+print ("METHOD 2:- THE LARGEST KEY BELONGS TO ::",key, "AND ITS", largest)
+
+### THIRD EXERCISE.
+
+"""
+This program records the domain name (instead of the address)
+where the message was sent from instead of who the mail came from (i.e., the
+whole email address). At the end of the program, print out the contents of your
+dictionary.
+python schoolcount.py
+Enter a file name: mbox-short.txt
+{'media.berkeley.edu': 4, 'uct.ac.za': 6, 'umich.edu': 7,
+'gmail.com': 1, 'caret.cam.ac.uk': 1, 'iupui.edu': 8}
+
+"""
+
+new_dict={}
+key1=""
+
+for key in dict:
+
+    key1=key.split("@")
+    key1=key1[1]
+    if key1 not in new_dict:
+        new_dict[key1]=dict[key]
+    else:
+        new_dict[key1]=new_dict[key1]+dict[key]
+
+
+print ('THE NEW DICTIONARY MADE OUT OF DOMAIN NAME AND ITS VALUES ARE::')
+print ("")
+print (new_dict)
+

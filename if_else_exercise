@@ -1,0 +1,89 @@
+#!/usr/bin/python
+import sys
+
+"""
+Exercise 3.3 Write a program to prompt for a score between 0.0 and 1.0. If the
+score is out of range, print an error message. If the score is between 0.0 and 1.0,
+print a grade using the following table:
+Score Grade
+>= 0.9 A
+>= 0.8 B
+>= 0.7 C
+>= 0.6 D
+< 0.6 F
+Enter score: 0.95
+A
+Enter score: perfect
+Bad score
+Enter score: 10.0
+Bad score
+Enter score: 0.75
+C
+Enter score: 0.5
+F
+Run the program repeatedly as shown above to test the various different values for
+input.
+"""
+"""
+prompt=""
+
+while prompt != 'EXIT':
+     prompt="PLEASE ENTER A SCORE BETWEEN 0.0 AND 1.0 \n"
+     input=raw_input(prompt)
+     if input >= '0.6' and input <'0.7':
+        grade='D'
+     elif input >= '0.7' and input < '0.8':
+        grade='C'
+     elif input >= '0.8' and input < '0.9':
+        grade='B'
+     elif input >= '0.9' and input <='1.0':
+        grade='A'
+     elif input >='0.5' and input <'0.6':
+        grade='F'
+     elif input == 'EXIT':
+        print ('EXITING THE PROGRAM NOW GOODBYE')
+        break
+     else:
+        grade='BAD SCORE'
+     print(grade)
+"""
+
+#### SAME PRGRM AS ABOVE BUT THIS USES FUNCTION CALL.
+
+def computegrade(input):
+
+    print ('CALLING THE FUNCTION WITH VAR', input)
+    if input >= '0.6' and input <'0.7':
+       grade='D'
+       return grade
+    elif input >= '0.7' and input < '0.8':
+       grade='C'
+       return grade
+    elif input >= '0.8' and input < '0.9':
+       grade='B'
+       return grade
+    elif input >= '0.9' and input <='1.0':
+       grade='A'
+       return grade
+    elif input >='0.5' and input <'0.6':
+       grade='F'
+       return grade
+    else:
+       grade='BAD SCORE'
+       return grade
+
+
+
+score=""
+
+
+while score != 'EXIT':
+         prompt="PLEASE ENTER A VALID SCORE BETWEEN 0.5 AND 1.0\n"
+         score=raw_input(prompt)
+         print ("THE SCORE ENTERED BY USER IS:", score)
+         grd=computegrade(score)
+         print ("&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&")
+         print ('FOR SCORE %s THE GRADE is::%s' %(score,grd))
+         print ("&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&")
+else:
+         print ("ENTERED EXIT BYE BYE")

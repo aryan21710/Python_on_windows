@@ -1,0 +1,79 @@
+#!/usr/bin/python
+import sys
+
+"""
+Write a program to prompt the user for hours and rate per hour to
+compute gross pay. 
+grosspay= hours*rate
+Enter Hours: 35
+Enter Rate: 2.75
+Pay: 96.25
+"""
+
+"""
+prompt = "ENTER THE NO OF HOURS WORKED BY AN EMPLOYEE \n"
+hours=raw_input(prompt)
+prompt= "ENTER THE RATE PER HOUR \n"
+rate=raw_input(prompt)
+
+print ('THE HOURS AND RATE FOR THE EMP IS::', hours,rate)
+
+if hours > 40:
+   try:
+      hours=float(hours)
+      rate=float(rate)
+      prompt= "ENTER THE RATE PER HOUR \n"
+      pay=float(rate)*float(hours)*1.5
+      print ("THE PAY FOR THE EMPLOYEE SHOULD BE ", pay)
+   except:
+      e=sys.exc_info()[0]
+      print ("ERROR,PLEASE ENTER NUMERIC NO's",e)
+elif hours <= 40:
+   try:
+      hours=float(hours)
+      rate=float(rate)
+      prompt= "ENTER THE RATE PER HOUR \n"
+      pay=float(rate)*float(hours)
+      print ("THE PAY FOR THE EMPLOYEE SHOULD BE ", pay)
+   except:
+      e=sys.exc_info()[0]
+      print ("ERROR,PLEASE ENTER NUMERIC NO's",e)
+
+"""
+
+#### SAME PROGRAM AS ABOVE BUT THIS ONE IS EXECUTED USING A FUNCTION
+
+def pay_program(hrs,Rate):
+    print ('PAY PROGRAM FUNCTION IS CALLED WITH VAR', hrs,Rate)  
+    pay=hrs*1.5*Rate
+
+    print ("THE OVERTIME PAY FOR THE EMP IS ::", pay)
+
+
+
+prompt= "ENTER THE HOURS IN NUMERIC \n"
+hours=raw_input(prompt)
+
+prompt ="ENTER THE RATE IN NUMERIC \n"
+rate=raw_input(prompt)
+
+
+try:
+   hours=float(hours)
+   rate=float(rate)
+   print ("hours entered is :", hours)
+   print ("rate entered is: ", rate)
+
+   pay_program(hours,rate)
+
+except:
+
+   e=sys.exc_info()[0]
+   print ("ERROR: ",e)
+
+
+
+
+    
+
+

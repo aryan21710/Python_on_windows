@@ -1,0 +1,51 @@
+#!/usr/bin/python
+import sys
+'''
+fhand=open('test_file')
+
+for line in fhand:
+    line=line.split('\n')
+    print('line is ***',line)
+
+fhand.close()
+
+fhand = open('test_file')
+for line in fhand:
+    if "OF" in line:
+        line=line.rstrip()
+        print(line) 
+
+fhand.close()
+'''
+try:
+   fhand=open('test_file3')
+   for line in fhand:
+       line=line.rstrip()   
+       print('line for test_file2 :',line)
+except:
+   e=sys.exc_info()[0]
+   print('error',e)       
+
+
+fhand=open('test_file','w')
+
+
+while('TRUE'):
+     try:
+        prompt='ENTER THE LINE YOU WANT TO ENTER IN THE FILE:\n'
+        x=raw_input(prompt)
+        x=x.upper()
+        if (x != 'EXIT'):
+           fhand.write(x)
+        else:
+           break
+     except:  
+        e=sys.exc_info()[0]
+        print('ERROR',e)     
+fhand.close()
+fhand=open('test_file','r')
+
+for line in fhand:
+    line=line.rstrip()
+    print('line is:',line)
+           

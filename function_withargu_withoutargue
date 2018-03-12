@@ -1,0 +1,64 @@
+#!/usr/bin/python
+
+
+# This program will test the functionality of function or procedure in Python. It will verify what happens when no argument is passed while calling the function, but the function has an argument in it.
+
+i=10
+def fun(arg1=i):
+    print (" value of arg1 is %d" %arg1)
+
+
+i=5  
+#fun() # SINCE NO ARGS ARE PASSED, THE DEFAULT VALUE RETURNED WILL BE 10. REASON BEING The default value      # are evaluated at the point of function definition in the defining scope, so that
+#fun(i) # HERE AS OBVIOUS, IT WILL BE RETURNED AS 5    
+
+#### NEXT PROGRAM
+
+
+#def fun1(a,b="sim",c="mango suites"):
+def fun1(a,b,c):
+#     print ("%s and %s for the first time stayed in %s" %(a,b,c))
+#      a=raw_input("PLEASE ENTER GUYS NAME:::")
+#      b=raw_input("PLEASE ENTER GIRLS NAME:::")
+#      c=raw_input("PLEASE ENTER WHERE THEY MET FOR THE FIRST TIME:::")
+    print ("%s and %s for the first time fucked in %s position" %(a,b,c))
+      
+#print("+++++++ THIS IS THE LOVE PROGRAM+++++++")
+#a=raw_input("PLEASE ENTER GUYS NAME:::")
+#b=raw_input("PLEASE ENTER GIRLS NAME:::")
+#c=raw_input("PLEASE ENTER WHERE THEY MET FOR THE FIRST TIME:::")
+#c=raw_input("PLEASE ENTER POSITION:::")
+#fun1(a,b,c) # HERE b and c are the optional args, so fun1 can be called using one mandatory argument
+              # which is a
+
+#fun1() # THIS WILL GIVE ERROR, YOU NEED TO ATLEAST PASS ONE MANDATORY ARG
+#fun1(b="supercharger",a="grandcanyon")
+
+#fun1(a="supercharger", "grandcanyon") # THIS WILL GIVE ERROR SINCE
+
+
+########### NEXT PROGRAM
+
+### when function has an argument which is name= , its called keyword argument. So when you call the sasame function you can call it either as keyword arg which is "name=value" or "value" which is called as positional argument. If you just call with name in the function (name) without passing any value, it will give error. If you are passing and defining only the var without its value in the func, then its called a positional argument. For eg func(3). so positional arg should come first followed by keyword arg. also order of the keyword arg is not imp while calling the function.  
+
+
+def f(age,name='aryan',gender='male'):
+    print ("%s who is %s is %d years old" %(name,gender,age))
+
+
+#f(35,name='aryan',gender='male') #WILL PASS
+#f(35,'aryan','male')             #WILL PASS
+#f(age,name,gender)                  # WILL FAIL, COZ KEYWORD ARG NAME AND GENDER VALUE IS NOT PASSED.                                   # HERE KEYWORD ARG IS TREATED AS POSTIONAL ARG.
+
+#f(name='aryan',35,gender='male') # WILL FAIL, POSTIONAL ARG 35 IS FOLLOWED BY KEYWORD ARG WHICH SHOULDNT BE THE CASE
+
+f(name='aryan',age=35,gender='male') # WILL PASS, POSTIONAL ARG 35 IS TREATED AS KEYWORD ARG, SINCE ITS PASSED WITH VAR NAME AND ITS VALUE (AGE=35} , IT WILL PASS
+
+ 
+f(35,gender='male', name='aryan') #WILL PASS
+
+f(36) # WILL PASS, AS POSTIONAL ARG IS MANDATORY TO BE PASSED
+
+#f(name='aryan') #WILL FAIL, AS VALUE OF POSTIONAL ARG AGE IS MISSING. POSTIONAL ARG IS MANDATORY WHILE CALLING THE FUNCTION BUT KEYWORD ARG ISNT. VALUE OF AGE THE POSTIONAL ARG IS MISSING WHILE DEFINING THE FUNCTIONS. SO FUNCTION DOESNT KNOW WHATS THE DEFAULT VALUE TO BE PRINTED
+
+

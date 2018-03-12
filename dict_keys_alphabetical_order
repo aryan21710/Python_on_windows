@@ -1,0 +1,34 @@
+#!/usr/bin/python
+
+# THIS WILL PRINT THE KEYS OF A DICTIONARY IN AN ALPHABETICAL ORDER.
+
+
+dict={'laptop' : 'apple', 'car' : 'xuv500', 'tv' : 'samsung', 'watch' : 'tissot', 'bike' : 'zx14r'}
+
+
+print ("THE DICT USED IN THIS EXAMPLE IS ", dict)
+
+keyslist=[]
+
+keyslist=dict.keys()
+
+print ("THE LIST MADE OUT OF KEYS OF DICT IS:::", keyslist)
+
+keyslist.sort()
+
+print ("THE SORTED LIST MADE OUT OF KEYS OF DICT IS:::", keyslist)
+
+print()
+
+print("THE SORTED KEYS IN ALPHABETICAL ORDER IS:::")
+
+for key in keyslist:
+
+    print (key , dict[key])
+
+
+
+
+
+
+

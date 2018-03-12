@@ -1,0 +1,31 @@
+#!/usr/bin/python
+'''
+Define a procedure histogram() that takes a list of integers and prints a histogram to the screen. For example, histogram([4, 9, 7]) should print the following:
+
+****
+*********
+*******
+'''
+
+def histogram(lst):
+    star="*"
+    output=""
+    print('THE LIST OF INTEGER\'S ARE:',lst)
+    for i in lst:
+        output=star * int(i)
+        print(output)
+
+
+lst=[]
+while ("TRUE"):
+
+
+      prompt='PLEASE ENTER A INTEGER OR EXIT TO COME OUT:\n'
+      x=(raw_input(prompt))
+      x=x.upper()
+      if (x != 'EXIT'):
+         lst.append(x)
+      else:
+         break
+
+histogram(lst)

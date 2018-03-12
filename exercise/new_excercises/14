@@ -1,0 +1,21 @@
+#!/usr/bin/python
+'''
+Write a program that accepts a sentence and calculate the number of upper case letters and lower case letters.
+Suppose the following input is supplied to the program:
+Hello world!
+Then, the output should be:
+UPPER CASE 1
+LOWER CASE 9
+'''
+
+input="HELLO World"
+
+lower,upper=0,0
+for i in range(len(input)):
+    if input[i].islower():
+       lower=lower+1
+    elif input[i].isupper():
+       upper=upper+1 
+    
+print ('UPPER CASE',upper)
+print ('LOWER CASE',lower)

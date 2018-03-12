@@ -1,0 +1,35 @@
+#!/usr/bin/python
+'''
+Write a function find_longest_word() that takes a list of words and returns the length of the longest one.
+'''
+
+
+lst=[]
+input=""
+while 'TRUE':
+       if input != 'EXIT':
+          prompt='ENTER A  WORD ::\n'
+          input=raw_input(prompt)
+          input=input.rstrip()
+          lst.append(input)
+       else:
+          break
+
+
+print ('THE WORDS ENTERED BY USER ARE ::', lst)
+
+largest=0
+for i in lst:
+ 
+    if len(i) > largest:
+
+       largest=len(i)
+       lar_word=i
+    else:
+
+       continue
+
+print ('THE LARGEST WORD AND ITS LENGTH IN THE LIST IS::', lar_word,largest) 
+
+    
+

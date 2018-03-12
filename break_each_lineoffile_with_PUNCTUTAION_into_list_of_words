@@ -1,0 +1,108 @@
+#!/usr/bin/python
+
+#Write a Python program to read through the lines of the file with PUNCTUATION, break each line into a list of words, and then loop through each of the words in the line and count each word using a dictionary.
+
+import string
+
+filename="dict_file_reference_punctuation"
+
+fhand=open(filename,'r')
+
+print("FILE USED AS INPUT IN THIS PROGRAM IS", filename)
+print ("")
+print ("THE CONTENTS OF THE FILE ARE AS FOLLOWS::")
+
+for line in fhand:
+    line=line.strip() # THIS WILL TAKE OUT THE BLANK LINES INSERTED BETWEEN 2 LINES WHEN LINE VAR IS PRINTED
+    print (line)
+
+
+fhand.close()
+
+try:
+   fhand=open(filename,'r')
+except:
+    e=sys.exc_info()[0]
+    print ("THE ISSUE IS", e)   
+lst=[]
+
+for line in fhand:
+        line=line.split()
+        for i in range(len(line)):
+        #    print ("i and line[i]is ::",i , line[i])
+            lst.append(line[i])
+
+print (" THE LIST BEFORE REMOVING THE PUNCTUATION IS", lst)
+
+del lst
+
+lst=[]
+print ("TO REMOVE PUNCTUATION USE A VAR WHICH HAS ALL PUNCTUATION CHAR IN IT")
+print (string.punctuation)
+
+fhand.close()
+fhand=open(filename, 'r')
+string.punctuation=".,/?:'\"[]*%#$@!"
+for line in fhand:
+        #print ("line is", line)
+        line=line.translate(None, string.punctuation) # THIS WORKS ONLY ON STRING AND NOT ON LIST. IF USED BELOW IT 
+                                                      # WILL FAIL. ALSO IMPORT STRING TO MAKE THIS WORK.
+
+        #print ("line after TRANSLATE is and its length is", line, len(line))
+        line=line.split()
+#       line=line.translate(None, string.punctuation) # IT WILL FAIL HERE AS , LINE HAS BECOME A LIST HERE.
+
+        #print ("line after split is ane its length is", line, len(line))
+       # print ("")
+        for i in range(len(line)):
+        #    print ("i and line[i]is ::",i , line[i])
+            lst.append(line[i])
+
+print ("THE LIST AFTER REMOVING PUNCTUATION IS AND ITS LENGTH IS::", lst,len(lst)) 
+
+dict={}
+count=1
+leng=len(lst)
+key1=[]
+print ("length of lst is:", leng)
+
+for i in range(len(lst)):
+    if lst[i] not in key1:
+
+       count=1
+       j=i+1
+       while (j < leng):
+   #          print ("i and j,lst[i] , lst[j]", i, j, lst[i], lst[j])
+             key=lst[i]
+             if lst[i]==lst[j]:
+    #            print ("***********MATCH FOUND FOR ",lst[j])
+                count=count+1
+                key1.append(lst[i])
+                key=lst[i]
+                dict[key]=count
+    #            print ("1:key, lst[i], lst[j],and count is", key, lst[i], lst[j],count)
+                j=j+1
+             else:
+                j=j+1
+       dict[key]=count
+    else:
+    #    print ("lst[1] is in key1", lst[i])
+        continue
+count=1
+key=lst[i]
+dict[key]=count
+print ("######################")
+#print (key, "APPEARED",dict[key], "TIMES")
+print ("######################")
+
+print("PRINTING THE DICTIONARY WITH ITS KEY AND NUMBER OF TIMES THE KEY APPEARED IN DICTIONARY AS ITS VALUE")
+print ("THE DICTIONARY IS:::", dict)
+
+
+
+
+   
+ 
+
+
+

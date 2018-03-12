@@ -1,0 +1,9 @@
+#!/usr/bin/python
+
+from Tkinter import *
+root=Tk()
+logo=PhotoImage(file="/Users/AryanS/Downloads/3p_2.gif")
+texts='HELLO WORLD'
+w=Label(root,text=texts,image=logo,compound=CENTER,fg='black',font='VERDANA 10 bold',bg='red')
+w.pack(side='right')
+root.mainloop()

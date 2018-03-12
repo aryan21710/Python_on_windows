@@ -1,0 +1,22 @@
+#!/usr/bin/python
+import sys
+'''
+Define a function that computes the length of a given list or string. (It is true that Python has the len() function built in, but writing it yourself is nevertheless a good exercise.)
+'''
+
+
+prompt=""
+dict={}
+i=0
+while "TRUE":
+      prompt="ENTER NO'S TO CREATE A LIST, ENTER done TO QUIT::\n"
+      input=raw_input(prompt)
+      if input != 'done':
+         i=i+1
+         dict[i]=input
+      else:
+         break
+
+
+print ('THE DICTIONARY IS ::', dict)
+print ('THE LENGTH OF DICT IS::', i)

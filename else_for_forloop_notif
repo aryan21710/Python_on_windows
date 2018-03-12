@@ -1,0 +1,13 @@
+#!/usr/bin/python
+
+# When the break condition inside the for loop is met, it doesnt take the control to the else block. The else block is met when condition for the loop is false.
+
+
+for n in range(2, 10):
+     for x in range(2, n):
+         if n % x == 0:
+             print(n, 'equals', x, '*', n//x)
+             break
+     else: # This else belongs to for loop and not part of if statement
+         # loop fell through without finding a factor
+         print(n, 'is a prime number')

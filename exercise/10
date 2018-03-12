@@ -1,0 +1,49 @@
+#!/usr/bin/python
+
+'''
+Define a function overlapping() that takes two lists and returns True if they have at least one member in common, False otherwise. You may use your is_member() function, or the in operator, but for the sake of the exercise, you should (also) write it using two nested for-loops.
+'''
+
+
+lst1=['6052','mango205','aryan','sim','ryan']
+lst2=['xuv500','zx14r','06052','gv650']
+
+#### METHOD 1#################
+'''
+for i in range(len(lst1)):
+
+    if lst1[i] in lst2:
+       output= "PRESENT"
+       break
+    else:
+       output= "NOT PRESENT"
+       continue
+
+
+if output=="PRESENT":
+   print ('OVERLAPPING LISTS')
+else:
+   print ('NON OVERLAPPING LISTS')
+'''  
+#### METHOD 2#################
+print (lst1)
+print (lst2)
+output="NOT PRESENT"
+for i in range(len(lst1)):
+
+    for j in range(len(lst2)):
+
+        if lst1[i]==lst2[j]:
+           output="PRESENT"
+           print ("MATCH DURING ",lst1[i], "COMPARED WITH", lst2[j])
+           break
+        else:
+           print (lst1[i], "COMPARED WITH", lst2[j])
+           continue
+
+if output=="PRESENT":
+   print ('OVERLAPPING LISTS')
+else:
+   print ('NON OVERLAPPING LISTS')
+ 
+

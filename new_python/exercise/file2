@@ -1,0 +1,25 @@
+#!/usr/bin/python
+
+#Write a program to read through a file and print the contents of the file (line by line) all in lower case. Executing the program will look as follows:
+
+
+fhand=open('test_file4','r')
+count=1
+for line in fhand:
+    line=line.rstrip()
+    print('LINE %d IS: %s' %(count,line))
+    count=count+1
+fhand.close()
+fhand=open('test_file4','r')
+line1=""
+count=1
+print('\n' * 3)
+for line in fhand:
+    x=""
+    for i in line:
+        x=x+i.lower()
+    line1=line1+x
+    line1=line1.rstrip()
+    print("LINE %d is %s:" %(count,line1))
+    count=count+1
+    line1=""

@@ -1,0 +1,23 @@
+#!/usr/bin/python
+
+
+'''
+Write a version of a palindrome recogniser that accepts a file name from the user, reads each line, and prints the line to the screen if it is a palindrome
+'''
+
+fhand=open('32_file','r')
+str=""
+count=1
+for line in fhand:
+    line=line.rstrip()
+    for i in range(0,len(line)):
+        str=str+line[len(line)-i-1]
+    str=str.lower()    
+    #print('reverse string',count,'is:',str)
+    count=count+1
+    line=line.lower()
+    if (str==line):
+       print('PALINDROME LINE:',line)
+    str=""
+
+ 

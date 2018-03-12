@@ -1,0 +1,119 @@
+#!/usr/bin/python
+import random
+import re
+
+def basic_infra(word,clue,userinput,lenword):
+    dict={}
+    ind=[]
+    printclue=""
+
+    for i in range(len(clue)):
+        if clue[i] != " ":
+           cluecnt=clue.count(clue[i])
+           if cluecnt==1:
+             x=re.search((clue[i]),word)   
+             dict[x.start()]=clue[i]
+           else:
+             for x in re.finditer(clue[i],word):
+                 dict[x.start()]=clue[i]
+
+
+    for i in range(len(word)):
+        if i not in dict:
+           printclue=printclue+" "
+        else:
+           printclue=printclue+dict[i]
+
+
+    if userinput == "":
+       initial_clues='\t'*2+printclue
+       dash='\t'*2+'-'*len(word)
+       print (" ")
+       print initial_clues
+       print dash
+    else:
+       if userinput in word:
+          for match in re.finditer(userinput,word):
+              ind.append(match.start())
+          nuclue=""
+          leng_index=len(ind)
+          printclue=list(printclue)
+          for i in range(len(printclue)):
+              if i in ind:
+                 if printclue[i]==" ":
+                    printclue.insert(i,userinput) 
+                    printclue.pop(i+1) 
+          for i in range(len(printclue)):
+              nuclue=nuclue+printclue[i]
+          del printclue
+          printclue=nuclue
+       else:
+          print ('\n')
+          print ('OOPS, TRY AGAIN') 
+
+       initial_clues='\t'*2+printclue
+       dash='\t'*2+'-'*leng
+       print ("\n\n" )
+       print initial_clues
+       print dash
+       print ("\n\n" )
+      
+    return printclue
+
+
+
+
+
+#fhand=open('5letter_word_file','r')
+fhand=open('movie_list','r')
+lst=[]
+for line in fhand:
+    line=line.rstrip()
+    lst.append(line)
+actualword=random.choice(lst)
+lenactualword=len(actualword)
+nuword=list(actualword)
+leng=len(nuword)
+no_of_clues=leng/2
+chances=lenactualword-no_of_clues+2
+clue=""
+i=0
+while (len(clue)<no_of_clues):
+       rand=random.choice(nuword)
+       if rand not in clue:
+          clue=clue+rand
+          nuword.remove(clue[i])
+          i=i+1
+       else:
+          continue
+input=""
+print ('\n\n')
+print ("*******************************************************")
+print 'LETS PLAY HANGMAN.FOLLOWING IS THE PUZZLE AND ITS CLUES '
+print ("*******************************************************")
+print ('\n\n')
+basic_infra(actualword,clue,input,lenactualword)
+print ('\n\n')
+while chances > 0: 
+      if clue != actualword:
+         prompt='YOUR TURN TO ENTER A LETTER ::'
+         input=raw_input(prompt)
+         print ("\n")
+         a='NO OF CHANCES LEFT ARE::'+str(chances)
+         print a
+         input=input.lower()
+         input=input.rstrip()
+         if input != 'exit':
+            x=basic_infra(actualword,clue,input,lenactualword)
+            clue=x
+         else:
+            break
+         chances=chances-1
+         if chances==0 and clue != actualword:
+            print ('\n\n')
+            print ('YOU LOST :(. READY FOR ANOTHER CHALLENGE?') 
+
+      else:
+         print ('CONGRATULATIONS. YOU SOLVED THE HANGMAN.. READY FOR ANOTHER ONE ....')
+         break
+

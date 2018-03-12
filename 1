@@ -1,0 +1,41 @@
+#/usr/local/python
+
+# Str.capitalize: Return a copy of the string with its first character capitalized and the rest lowercased
+
+# This code needs to be worked on in which you can scan through the list and thru loop, picks up the first letter, make it capital and rest of the letter leave it blank. NEED TO FIND OUT HOW TO OVERWRITE THE STRING IN THE LOOP.  REFER str.capitalize program for the solution
+
+print "Code for str.capitalize"
+
+a="aryan sharma" #the string which needs to be worked on
+
+print ("length of string a is", len(a))
+
+b={}            # Define an empty output string
+
+for i in range(len(a)):
+    print ("value of i is %d" %i)
+    b=a[0:1].upper()+a[1:len(a)]
+    if i == 100 :
+       print ("""
+              value of i is %d, since its the first letter of the string
+              making it Capital 
+              """ %i) 
+       b=a[0:0].upper()
+       print (""" string b so far is """, b)
+    else:
+      print("""
+            Now since i which is %d is not the first letter of word
+             leaving it as it is
+            """ %i ) 
+      b=a[i]
+
+      print (""" string b so far has become """, b)
+
+#print ("The new string after the conversion is %s" b)
+print(b)
+
+      
+
+
+
+

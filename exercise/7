@@ -1,0 +1,15 @@
+#!/usr/bin/python
+
+'''
+Define a function reverse() that computes the reversal of a string. For example, reverse("I am testing") should return the string "gnitset ma I"
+'''
+
+prompt = "ENTER A STRING ::\n"
+input=raw_input(prompt)
+print ("THE STRING ENTERED BY USER ::", input)
+output=""
+for i in range(len(input)):
+    output=output+input[(len(input)-1)-i]
+#    print (output)
+
+print ("THE REVERSE OF THE STRING ::", output)

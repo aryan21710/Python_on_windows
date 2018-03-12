@@ -1,0 +1,17 @@
+#!/usr/bin/python
+import re
+
+'''
+Write a regular expression which matches strings which starts with a sequence of digits - at least one digit - followed by a blank and after this arbitrary characters. 
+'''
+
+prompt="Enter the strings which starts with a sequence of digits - at least one digit - followed by a blank and after this arbitrary characters::\n"
+
+input=raw_input(prompt)
+input=input.rstrip()
+if re.search('^[0-9]+ \S*',input):
+   print "pass"
+else:
+   print "false"
+
+

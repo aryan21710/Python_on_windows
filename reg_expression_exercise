@@ -1,0 +1,24 @@
+#!/usr/bin/python
+import re
+
+fname='testfile3'
+regexp_prompt="ENTER ANY REGEXP WHICH YOU NEED TO LOOK IN FILE::\n"
+
+input=raw_input(regexp_prompt)
+input=input.rstrip()
+print ('THE REGEXP ENTERED BY USER IS:',input)
+fhand=open(fname,'r')
+count=0
+for line in fhand:
+
+    line=line.rstrip()
+    match=re.findall(input,line)
+  
+    if len(match) > 0:
+          print (line,"****", match)
+          count=count+1
+
+
+print (input, "REGEXP MATCHES", count, "NO OF TIMES IN THE FILE")
+ 
+

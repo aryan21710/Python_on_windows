@@ -1,0 +1,34 @@
+#!/usr/bin/python
+'''
+Define a procedure histogram() that takes a list of integers and prints a histogram to the screen. For example, histogram([4, 9, 7]) should print the following:
+
+****
+*********
+*******
+'''
+
+
+def histogram(int1,int2,int3):
+
+    char="*"
+    print ('INSIDE THE FUNCTION \n')
+    print (char*int1) 
+    print (char*int2) 
+    print (char*int3) 
+
+    
+
+
+
+
+int1=14
+int2=1
+int3=20
+
+histogram(int1,int2,int3)
+
+
+
+
+
+

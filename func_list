@@ -1,0 +1,27 @@
+#!/usr/bin/python
+
+## 1] FUNCTION THAT TAKES A LIST AND MODIFIES IT BY REMOVING THE FIRST AND LAST ELEMENT AND RETURNING NONE.
+
+### 2] FUNCTION THAT TAKES A LIST AND RETURNS A NEW LIST THAT CONTAINS ALL BUT THE FIRST AND LAST ELEMENTS
+
+
+def chop(t):
+
+    t[0:-1]
+    print ("CHOP O/P:- t after removing the first element is WRONG SOLUTION",t)
+    t.pop(0)
+    t.pop(-1)
+    print ("CHOP O/P:- t after popping the 1st and last element is RIGHT SOLUTION", t)
+
+ 
+def middle(t1):
+    
+    t2=t1[1:-1]
+    print ("MIDDLE O/P:-t2 and t1 after removing the 1st and last elements are", t2,t1)
+
+
+t=['1','2','3','4','5','6']
+print ('CALLING THE FUNCTION CHOP', chop(t))
+
+t1=['a','b','c','d','e','f']
+print ('CALLING THE FUNCTION middle', middle(t1))

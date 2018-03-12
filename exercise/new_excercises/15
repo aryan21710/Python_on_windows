@@ -1,0 +1,21 @@
+#!/usr/bin/python
+'''
+Write a program that computes the value of a+aa+aaa+aaaa with a given digit as the value of a.
+Suppose the following input is supplied to the program:
+9
+Then, the output should be: (9+99+999+9999)
+11106
+'''
+
+input=7
+
+dig2=str(input)+str(input)
+dig3=str(input)+str(input)+str(input)
+dig4=str(input)+str(input)+str(input)+str(input)
+
+output=input+int(dig2)+int(dig3)+int(dig4)
+
+print output
+
+
+

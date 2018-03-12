@@ -1,0 +1,48 @@
+#!/usr/bin/python
+import random
+
+'''
+Write a program able to play the "Guess the number"-game, where the number to be guessed is randomly chosen between 1 and 20. (Source: http://inventwithpython.com) This is how it should work when run in a terminal:
+
+>>> import guess_number
+Hello! What is your name?
+Torbjorn
+Well, Torbjorn, I am thinking of a number between 1 and 20.
+Take a guess.
+10
+Your guess is too low.
+Take a guess.
+15
+Your guess is too low.
+Take a guess.
+18
+Good job, Torbjorn! You guessed my number in 3 guesses!
+'''
+
+name=raw_input("HELLO WHAT IS YOUR NAME\n")
+prompt="Well "+name+',I am thinking of a number between 1 and 20.'+'\n'
+print prompt
+number=random.randint(1,20)
+#print ('THE NUMBER GUESSED IS', number)
+cnt=1
+max=20
+min=1
+for i in range(min,max):
+
+    prompt='TAKE A GUESS\n'
+    input=int(raw_input(prompt))
+    if input <= max:
+       if input==number:
+          print ('Good Job ',name, '! You guessed my number in', cnt, 'guesses!')
+          break
+
+       elif input < number:
+          print ('YOUR GUESS IS TOO LOW. TRY AGAIN')
+    
+       elif input > number:
+          print ('YOUR GUESS IS TOO HIGH, TRY AGAIN')
+    else:
+       print ('PLEASE ENTER A NUMBER WHICH IS BETWEEN', min,' AND ', max)
+    cnt=cnt+1
+
+

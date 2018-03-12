@@ -1,0 +1,22 @@
+#!/usr/bin/python
+'''
+Given two .txt files that have lists of numbers in them, find the numbers that are overlapping. file_overlap_2.txt file has a list of all prime numbers under 1000, and the other file_overlap_1.txt file has a list of happy numbers up to 1000.
+'''
+
+fhand=open('file_overlap_1.txt','r')
+#fhand1=open('file_overlap_2.txt','r')
+overlap=[]
+for line in fhand:
+    line=line.rstrip()
+    fhand1=open('file_overlap_2.txt','r')
+    for line1 in fhand1:
+        line1=line1.rstrip()
+    #    print ('line and line1 are', line,line1)
+        if line == line1:
+           overlap.append(line)
+        else:
+           continue 
+
+
+
+print ('the overlap list is', overlap)

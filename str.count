@@ -1,0 +1,42 @@
+#/usr/local/python
+
+# Str.count: The method count() returns the number of occurrences of substring sub in the range [start, end]. 
+# Syntax:
+#x="this is a test program which is written in python"
+#y="is"
+# x.count(y)
+# this will print no of times, 'is' present in x string which is 3
+
+
+print ("""
+        Code for str.count which is a function which does following
+        Returns the number of occurences of substring sub in the range 
+        [start,end]
+       """)
+
+x="this is a test program which is written in python"
+y="is"
+
+#x="aryan"
+#y="ryan"
+
+lenx=len(x)
+leny=len(y)
+print ("""
+         The length of the string x is "%s" 
+         and the substring y is "%s"
+       """ %(x,y) , lenx , leny)
+
+
+occurance=0
+for i in range(lenx):
+    if y[:]==x[i:i+leny]:
+       occurance=occurance+1
+    else:
+       print("""
+              str x at %d doesnt match
+              str y. Breaking out 
+             of loop
+             """ %(i))
+ 
+print("the substring matched the string %d times" %occurance)           

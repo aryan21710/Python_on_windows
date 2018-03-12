@@ -1,0 +1,54 @@
+#!/usr/bin/python
+import sys
+
+filename="testfile3"
+print ('INPUT TO THE FILE IS ::', filename)
+lst=[]
+cnt,j=0,0
+dict={}
+try:
+  
+    fhand=open(filename,'r')
+    print ("")
+    for line in fhand:
+        line=line.rstrip()
+        if "From:" in line:
+            cnt=cnt+1  
+            print ("MATCH FOUND", cnt, "times and the line is ::" ,line)
+
+            # The var line is a string which contains "From: XYZ.com". To get the sender id, make it into a list by sp            # splitting the string into blank spaces.Then get the 1st element of the list which will sender id.
+          
+            line=line.split() # Line becomes a list here.
+            lst.append(line[1])   # THIS MAKES THE LIST WITH NAMES OF ALL SENDER ID's, 
+                                  # WILL HAVE REPEATATIVE SENDER NAMES.
+
+        else:
+            continue
+
+            # MAKE THE DICTIONARY OUT OF THE LIST, KEY WILL BE SENDER ID AND NO OF TIMES THE SENDER ID APPEARS WILL BE            # ITS VALUE. WILL BE NEEDING 2 LOOPS ONE FOR THE STARTING ELEMENT AND ONE TO LOOP OVER OTHER ELEMENTS OF
+            # LIST. 
+    nlist=[]
+    for i in range(len(lst)):
+        j=i+1
+        if lst[i] not in nlist:
+            for j in range(len(lst)):
+                   if lst[i]==lst[j]:
+                      nlist.append(lst[i])
+                      key=lst[i]
+                      cnt=cnt+1
+                      dict[key]=cnt
+                   else:
+                      continue
+            dict[key]=count
+        else:
+            continue 
+
+
+except:
+
+   e=sys.exc_info()[0]
+   print ("THE ISSUE IN OPENING THE FILE IS", e)
+
+
+print ("THE DICTIONARY WITH SENDER ID'S AS KEY AND NO OF TIMES THEY APPEAR IN THE DICT AS THEIR VALUE IS::")
+print (dict)

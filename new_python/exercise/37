@@ -1,0 +1,20 @@
+#!/usr/bin/python
+'''
+Write a program that given a text file will create a new text file in which all the lines from the original file are numbered from 1 to n (where n is the number of lines in the file).
+'''
+
+inp_file='32_file'
+out_file='37_file'
+
+fhand1=open(inp_file,'r')
+fhand2=open(out_file,'w')
+count=1
+for line1 in fhand1:
+    line1=line1.rstrip()
+    count=str(count)
+    fhand2.write(count)
+    fhand2.write('. ')
+    count=int(count)+1
+    for i in line1:
+        fhand2.write(i)
+    fhand2.write('\n')

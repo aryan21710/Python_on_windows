@@ -1,0 +1,30 @@
+#!/usr/bin/python
+'''
+Write a function is_member() that takes a value (i.e. a number, string, etc) x and a list of values a, and returns True if x is a member of a, False otherwise. (Note that this is exactly what the in operator does, but for the sake of the exercise you should pretend Python did not have this operator.)
+'''
+
+def is_member(x,str):
+    print('THE STRING and CHAR ENTERED BY USER IS :',x,str)
+
+    cnt=len(str)-1
+    output=0
+    while (cnt>0):
+          if (x == str[cnt]):
+              output=1
+              break
+          cnt=cnt-1
+    if (output):
+       print('MEMBER')
+    else:
+       print('NOT MEMBER')
+
+
+
+
+
+prompt='ENTER A STRING:\n'
+str=raw_input(prompt)
+prompt='ENTER A CHAR WHICH IS OR NOT PART OF STRING:\n'
+x=raw_input(prompt)
+is_member(x,str)
+

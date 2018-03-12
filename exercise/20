@@ -1,0 +1,33 @@
+#!/usr/bin/python
+
+"""
+
+ENGLISH TO HINDI TRANSLATION
+
+"""
+
+def translate(eng,dict):
+    for key in dict:
+        if eng==key:
+           flag= dict[key]
+           break
+        else:
+           flag="WORD NOT PART OF DICTIONARY"
+           continue
+    return flag
+
+
+
+dict={"god":"bhagwan", "wedding":"shaadi", "and":"or", "happy":"khushi", "new":"naya", "year":"saal"}
+print (dict)
+
+prompt="\nENTER SOME ENGLISH WORDS FROM THE DICTIONARY::\n"
+input=raw_input(prompt)
+
+
+input=input.rstrip()
+hindi=translate(input,dict)
+
+print ('THE MEANING OF', input, 'IS', hindi)
+
+

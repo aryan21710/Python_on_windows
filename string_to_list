@@ -1,0 +1,30 @@
+#!/usr/bin/python
+
+
+# THIS PROGRAM CONVERTS ANY STRING INTO A LIST. THERE ARE 2 WAYS
+
+#1ST METHOD
+
+string1=raw_input("PLEASE ENTER ANY STRING OF YOUR CHOICE:::")
+
+list1= list(string1)
+lenstr=len(string1)
+
+print ("THS STRING IS %s and length of string is %d" %(string1,lenstr))
+print ("USING 1ST METHOD, THE LIST IS" , list1)
+
+#2nd METHOD
+
+list1=[]
+lenstr=len(string1)
+
+
+for i in range(len(string1)):
+#   print (i,string1[i])   # WILL PRINT, THE INDEX AND THE ELEMENT AT THAT INDEX IN THE LIST
+#   list1[i]=string1[i]    # THIS WONT WORK AS list1 is empty so you cant assign values to an empty lis                             list
+    list1.append(string1[i])
+
+if len(list1)==lenstr:
+    print ("2nd METHOD: THE LIST and its length is as follows", list1, len(list1))
+else:
+    print ("SOMETHING WRONG WITH THE PROGRAM")

@@ -1,0 +1,11 @@
+#!/usr/bin/python
+import random
+
+
+
+num=random.randrange(0,10)
+
+while(num!=5):
+    
+     print(num)
+     num=random.randrange(0,10) 

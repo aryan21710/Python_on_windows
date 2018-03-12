@@ -1,0 +1,29 @@
+#!/usr/bin/python
+'''
+Write a program, which will find all such numbers between 1000 and 3000 (both included) such that each digit of the number is an even number.
+The numbers obtained should be printed in a comma-separated sequence on a single line.
+'''
+
+x=[]
+flag=1
+for i in range(1000,3002):
+
+    i=str(i)
+    for j in range(len(i)):
+        if int(i[j])%2==0:
+           continue
+        else:
+           flag=0
+           x.append(i)    
+           break
+
+lst=[]
+for i in range(1000,3002):
+    i=str(i)
+    if i not in x:
+       lst.append(i)
+    else:
+       continue
+
+
+print (lst)

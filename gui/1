@@ -1,0 +1,8 @@
+#!/usr/bin/python
+from Tkinter import *
+root=Tk()
+w=Label(root,text='HELLO TKINTER!!!')
+w.pack()
+root.mainloop()
+
+

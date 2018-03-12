@@ -1,0 +1,39 @@
+#!/usr/bin/python
+from random import randint
+
+board=[]
+
+o=['O']
+
+size=int(raw_input('ENTER THE SIZE OF THE BATTLESHIP:'))
+
+for x in range(size):
+    board.append(o*(size))
+def print_board(board):
+    for x in board:
+        print " ".join(x)
+
+actual_row=randint(0,size-1)
+actual_col=randint(0,size-1)
+
+print ('ACTUAL ROW AND COLUMN ARE  %d  %d' %(actual_row,actual_col))
+count=0
+for count in range(4):
+    guess_row=int(raw_input('ENTER A GUESS FOR ROW:'))
+    guess_col=int(raw_input('ENTER A GUESS FOR COL:'))
+    count=count+1
+    print ('COUNT IS', count)
+    if count != 4:
+       if guess_row-1 == actual_row and guess_col-1==actual_col:
+          print ('CONGRATULATIONS YOU WON')
+          break
+       else:
+          if guess_row not in range(size-1) or guess_row not in range(size-1):
+             print ('ENTER ROW AND COL WHICH ARE BETWEEN 1 AND 5')
+          elif board[guess_row-1][guess_col-1]=='X':
+             print ('ALREADY ENTERED THE SAME, TRY NEW OPTIONS')
+          else:
+             board[guess_row-1][guess_col-1]='X'
+             print_board(board)
+    else:
+        print ('GAME OVER')

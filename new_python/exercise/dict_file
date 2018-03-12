@@ -1,0 +1,28 @@
+#!/usr/bin/python
+import sys
+
+#Write a Python program to read through the lines of the file, break each line into a list of words, and then loop through each of the words in the line and count each word using a dictionary.
+
+# use dict_file_reference
+lst=[]
+dict={}
+cnt=0
+try:
+   fhand=open('dict_file_reference','r')
+   for line in fhand:
+       line=line.rstrip()
+       line=line.split()
+       for i in line:
+           lst.append(i)  
+   print(lst)
+   for i in lst:
+       cnt=lst.count(i)
+       #print(i,' appears ', x ,'times')
+       if i not in dict.values():
+          x=i
+          dict[x]=cnt
+          print('x and dict[x] is:',x,dict[x])
+except:
+    error=sys.exc_info()[0]
+    print('error is',error)
+print (dict)               

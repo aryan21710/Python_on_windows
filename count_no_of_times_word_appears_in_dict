@@ -1,0 +1,67 @@
+#!/usr/bin/python
+
+# Suppose you are given a string and you want to cnt how many times each letter appears in the string.
+
+# Example:- 
+# word='brontosaurus'. In this case, following will be the solution which is based on dictionary.
+# {'a': 1, 'b': 1, 'o': 2, 'n': 1, 's': 2, 'r': 2, 'u': 2, 't': 1}
+
+#############################################################################################
+# SOLUTION:- 1
+#############################################################################################
+
+"""
+word='brontosaurus'
+
+print(" THE WORD WHICH NEEDS TO BE LOOKED UPON IS ::", word)
+print ("")
+dict={}
+for i in range(len(word)):
+
+    if len(word) > 0:
+       if word[i] not in dict: # THIS WILL CHECK WHETHER THE LETTER IS ALREADY PRESNT IN DICT AS A KEY
+          x=word[i]             
+          cnt=1                # SINCE KEY NOT PRESENT, THATS WHY VALUE WILL BE 1 EVERYTIME FOR KEY x
+          print ("x and i is " , x,i)
+          dict[x]=(cnt)       # THIS AND x=word[i] WILL SET THE VALUE cnt FOR KEY x in DICT
+          print ("dict in if ", dict)
+       else:                  # IF LETTER IS NOT PRESENT IN DICT AS A KEY
+          x=word[i]
+          cnt=dict[x]         #SINCE KEY IS PRESENT THATS WHY COMING TO ELSE BLOCK, FETCH THE VALUE FOR KEY x 
+          print ("x and i and cnt is " , x,i,cnt)
+          cnt=cnt+1           # INCREMENT THE VALUE BY 1, EVERYTIME FOR KEY x
+          dict[x]=cnt         # ASSIGN THE NEW VALUE FOR KEY x IN DICT
+          print ("dict in else ", dict)
+
+
+print ('THE FINAL OUTPUT IN FORM OF DICTIONARY IS::',dict)
+"""
+#############################################################################################
+# SOLUTION:- 2
+#############################################################################################
+
+
+word='brontosaurus'
+
+print(" THE WORD WHICH NEEDS TO BE LOOKED UPON IS ::", word)
+print ("")
+dict={}
+cnt=1
+for i in range(len(word)):
+
+    if len(word) > 0:
+       if word[i] not in dict:
+          x=word[i]
+          cnt=1
+          dict[x]=cnt   
+       else:
+          x=word[i]
+          cnt=dict.get(x,0) #GETS THE VALUE FR THE KEY x, if KEY ISN'T PRESENT THN IT RETURNS DEF VALUE WHICH IS 0
+          print ("x and cnt in else and wordi and dict is", x, cnt, word[i], dict)
+          cnt=int(cnt)+1
+          dict[x]=cnt
+
+   
+print ('THE FINAL OUTPUT IN FORM OF DICTIONARY IS::',dict)
+
+

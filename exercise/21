@@ -1,0 +1,30 @@
+#!/usr/bin/python
+'''
+Write a function char_freq() that takes a string and builds a frequency listing of the characters contained in it. Represent the frequency listing as a Python dictionary. Try it with something like char_freq("abbabcbdbabdbdbabababcbcbab")
+'''
+
+
+def char_freq(string):
+
+    dict={}
+    count=1
+    for i in range(len(string)):
+
+        if string[i] not in dict:
+           cnt=1
+           dict[string[i]]=cnt
+        else:
+           count=1
+           dict[string[i]]=dict[string[i]]+count
+
+    return dict 
+
+
+prompt="ENTER A STRING::\n"
+
+input=raw_input(prompt)
+output={}
+output=char_freq(input)
+
+print ('THE DICTIONARY WHICH REPRESENTS THE FREQUENCY LISTING FOR THE \
+        CHAR IN THE STRING ::',input, 'IS', output)

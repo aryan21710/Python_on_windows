@@ -1,0 +1,47 @@
+#!/usr/bin/python
+import sys
+
+'''
+Write a function filter_long_words() that takes a list of words and an integer n and returns the list of words that are longer than n.
+'''
+
+def filter_long_words(lst,num):
+    lst1=[]
+    print('the number and list entered are:',num,lst)
+    for i in lst:
+        if (len(i) > num):
+           lst1.append(i)  
+          
+    return lst1  
+    
+
+lst=[]
+while ("TRUE"):
+      prompt='ENTER A STRING TO BE PART OF THE LIST OR EXIT TO RETURN:\n'
+      x=raw_input(prompt)
+      x=x.upper()
+      if (x != 'EXIT'):
+         lst.append(x)
+      else:
+         break
+
+prompt='ENTER AN INTEGER VALUE:\n'
+try:
+   num=int(raw_input(prompt))
+except:
+   e=sys.exc_info()[0]
+   print('PLEASE ENTER ONLY INTEGER', e)
+
+
+output=filter_long_words(lst,num)
+print("the output list is:",output)
+
+       
+       
+ 
+
+
+
+
+
+

@@ -1,0 +1,39 @@
+#!/usr/bin/python
+
+#Write a program to read through a file and print the contents of the file (line by line) all in lower case. Executing the program will look as follows:
+
+import sys
+# USE FILE "TESTFILE".
+
+fhand=open('testfile','r')
+fhand1=open('testfile1','w')
+print('##THE ACTUAL FILE AND ITS CONTENTS ARE AS FOLLOWS::##')
+
+for line in fhand:
+    print line.strip()
+
+fhand.close()
+
+a='\n'+'\n'
+print (a) # THIS INSERTS 2 BLANK LINES IN THE OUTPUT
+
+fhand=open('testfile', 'r')
+print ("****THE FILE CONTENTS NOW WILL BE PRINTED IN LOWER CASE::***")
+for line in fhand:
+    line1=line.lower()
+    line1=line1.strip()
+    print(line1)
+    try:
+       fhand1.write(line1)
+       fhand1.write('\n')
+    except:
+       sys_exc.info()[0]
+       print (' PROBLEM IN WRITING TO NEW FILE ',e)
+
+fhand1.close()
+fhand1=open('testfile','r')
+print('##THE NEW FILE AND ITS CONTENTS ARE AS FOLLOWS::##')
+for line2 in fhand1:
+    print(line2)
+fhand.close()
+fhand1.close()

@@ -1,0 +1,25 @@
+#!/usr/bin/python
+'''
+Draw a chess game board like following. Also provide an option wherein user can enter the dimension or size of the board. (3X3 or 8x8)
+ __ __ __
+|  |  |  |
+|__|__|__|
+ 
+'''
+
+def game_board(x_size,y_size):
+    hdash='_'
+    blank=" "
+    vdash='|'
+
+    x=(blank+hdash+blank)*x_size
+    y=(vdash+hdash+vdash)*y_size
+    print x 
+    while y_size > 0:
+          print y
+          y_size=y_size-1
+
+x_size=5
+y_size=5
+game_board(x_size,y_size)
+

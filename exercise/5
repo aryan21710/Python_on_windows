@@ -1,0 +1,23 @@
+#!/usr/bin/python
+
+
+text="this is fun"
+'''
+output='tthhiss iss ffunn'
+output2='tothohisos isos fofunon'
+'''
+output=""
+vowel=['a','e','i','o','u']
+
+for i in range(len(text)):
+    if text[i] in vowel:
+       output=output+text[i]
+    elif text[i]== " ":
+       output=output+ " "
+    else:
+       output=output+text[i]+'o'+text[i]
+
+
+print ('THE FIRST OUTPUT IS', output)
+
+

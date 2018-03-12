@@ -1,0 +1,24 @@
+#!/usr/bin/python
+
+
+'''
+Write a version of a palindrome recogniser that accepts a file name from the user, reads each line, and prints the line to the screen if it is a palindrome
+'''
+
+fname='32_file'
+fhand=open(fname,'r')
+for line in fhand:
+    line=line.rstrip()
+
+    output=""
+    for i in range(len(line)):
+        output=output+line[(len(line)-1)-i]
+
+#    print ('line and output is:',line,output)
+    if line==output:
+       print (line,'IS PALINDROME')
+    else:
+       print (line,'IS NOT PALINDROME')
+
+
+    

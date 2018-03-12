@@ -1,0 +1,27 @@
+#!/usr/bin/python
+
+# THIS WILL PRINT THE KEYS OF A DICTIONARY IN AN ALPHABETICAL ORDER.
+
+dict={'laptop' : 'apple', 'car' : 'xuv500', 'tv' : 'samsung', 'watch' : 'tissot', 'bike' : 'zx14r'}
+
+lst=[]
+value=[]
+for i in dict:
+    lst.append(i)
+
+for j in dict.values():
+    value.append(j)
+print('THE KEYS LIST MADE OUT OF DICTIONARY IS:',lst)
+lst.sort()
+print('sorted key list out of made keys are:',lst)
+print('THE VALUE LIST MADE OUT OF DICTIONARY IS:',value)
+value.sort()
+print('sorted value list out of made keys are:',value)
+i=0
+j=0
+while(len(lst) > i and len(value) > j):
+     print(lst[i],value[j])
+     i=i+1
+     j=j+1
+
+

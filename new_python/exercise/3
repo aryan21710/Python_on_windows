@@ -1,0 +1,51 @@
+#!/usr/bin/python
+import sys
+'''
+Define a function that computes the length of a given list or string. (It is true that Python has the len() function built in, but writing it yourself is nevertheless a good exercise.)
+'''
+
+def len_str(str):
+
+    print('STRING INPUT TO A FUNCTION IS:',str)
+    cnt=0
+    for i in str:
+        cnt=cnt+1
+    return cnt
+
+
+
+def len_list(lst):
+
+    print('LIST INPUT TO A FUNCTION IS:',lst)
+    cnt=0
+    for i in lst:
+        if (i!=" "):
+            cnt=cnt+1
+    return cnt     
+    
+
+
+prompt='STRING OR LIST :\n'
+input=raw_input(prompt)
+if (input=='STRING' or input == 'string'):
+   prompt='ENTER A VALID STRING : \n'
+   x=raw_input(prompt)
+   x=str(x)
+   output=len_str(x)
+
+   print('THE LENGTH OF A STRING IS',output)
+else:
+   lst=[]
+   y=""
+   while ("TRUE"):
+
+         prompt='ENTER AN ELEMENT OF A LIST OR ENTER DONE TO EXIT:\n'
+         y=raw_input(prompt)
+         y=y.upper()
+         if (y !=  'DONE'):
+            lst.append(y)
+         else:
+             break
+
+   output=len_list(lst)
+   print('THE LENGTH OF A STRING IS',output)

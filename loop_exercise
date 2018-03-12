@@ -1,0 +1,36 @@
+#!/usr/bin/python
+import sys
+
+
+
+input=0
+total,count=0,0
+avg=0.0
+
+
+while 1:
+      
+      prompt="PLEASE ENTER A NUMERIC NO \n"
+      input=raw_input(prompt)
+    
+      
+      if input !='done':
+         count=count+1
+         try:
+            input=int(input)
+            print ("NUMBER ENTERED IS:",input)     
+            total=total+input
+         
+         except:
+
+            print ('INVALID INPUT')
+            continue
+      else:
+         break
+ 
+if count > 0:
+   avg=total/count
+   print (total, count, avg)
+else:
+   print (total, count, avg)
+

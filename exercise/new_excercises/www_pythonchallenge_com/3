@@ -1,0 +1,24 @@
+#!/usr/bin/python
+import re
+fhand=open('3.file','r')
+fhand1=open('3_file','w')
+expr="((?<![A-Z])[A-Z]{3}[a-z]{1}[A-Z]{3}(?![A-Z]))"
+cnt=0
+lst=[]
+for line in fhand:
+
+    line=line.rstrip()
+    if re.search(expr,line):
+       res=re.search(expr,line)
+       x=line.find(res.group(1))
+       if line[x-1].islower() and line[x+7].islower(): 
+          cnt=cnt+1
+          lst.append(res.group(1)) 
+          fhand1.write(res.group(1))
+          fhand1.write('\n')
+          fhand1.write(line)
+          fhand1.write('\n')
+       else:
+          continue
+
+print (cnt,lst)

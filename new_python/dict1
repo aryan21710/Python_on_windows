@@ -1,0 +1,20 @@
+#!/usr/bin/python
+
+
+dict={'my_bike':'zx14r',
+       'my_car':'xuv500',
+        'my_watch' : 'gear s',
+          'my_phone': 'note5'}
+
+print('the dict is as follows :', dict)
+
+print('I HAVE %s BIKE' %(dict['my_bike']))
+
+print('I HAVE ',(dict.get('my_car')))
+
+print('KEYS OF THE DICT ARE',dict.keys())
+print('VALUES OF THE DICT ARE',dict.values())
+
+
+
+   

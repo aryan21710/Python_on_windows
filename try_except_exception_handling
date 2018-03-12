@@ -1,0 +1,45 @@
+#!/usr/bin/python
+
+# ADD RAISE programs too.
+import sys
+
+int1=int(raw_input("PLEASE ENTER 1ST INTEGER:::"))
+
+int2=int(raw_input("PLEASE ENTER 2ND INTEGER:::"))
+
+def add():
+     int3=int1+int2
+     print ("ADDITION OF 2 NO's is", int3)
+
+def divide():
+    op=int2/int1
+    print ("DIVISION OF",int2, "&", int1, "is", op)
+
+##################################################
+try:
+   add()
+except ValueError:
+   print ("PLEASE ENTER ONLY INTEGER NO's")
+except:
+   e = sys.exc_info()[0]
+   print (" THE ERROR " ,e)
+  
+##################################################
+try:
+   divide()
+except ZeroDivisionError,e:
+   print ("ENTER NON ZERO NO ONLY",e)
+
+##################################################
+fname=raw_input("PLEASE ENTER A VALID FILE NAME WHICH BELONGS TO THE SAME DIR:::")
+
+try:
+   fhand = open(fname)
+   for line in fhand:
+       line=line.rstrip()
+       print line
+except IOError,e:
+   print ("ERROR is", e)
+except:       
+   e=sys.exc_info()[0]  # THIS WILL HANDLE ALL KINDS OF EXCEPTION. ALSO IMPORT SYS.
+   print ("the error is",e)

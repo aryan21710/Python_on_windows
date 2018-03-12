@@ -1,0 +1,25 @@
+#!/usr/bin/python
+import re
+
+prompt='ENTER A STRING WITH ANY NO OF OPEN AND CLOSE SQAURE BRACKETS::\n'
+input=raw_input(prompt)
+
+lst=list(input)
+expr='\[\]'
+while (len(input) > 0):
+      print ('input is',input)
+      if re.search(expr,input):
+         out=re.search(expr,input)
+         s=out.start()
+         lst.pop(s)
+         lst.pop(s)
+         input=""
+         for i in range(len(lst)):
+             input=input+lst[i]
+      else:
+        break
+
+if len(input)==0:
+   print ('BALANNCED STRING')
+else:
+   print ('UNBALANNCED STRING')

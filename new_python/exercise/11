@@ -1,0 +1,37 @@
+#!/usr/bin/python
+import sys
+
+'''
+Define a function generate_n_chars() that takes an integer n and a character c and returns a string, n characters long, consisting only of c:s. For example, generate_n_chars(5,"x") should return the string "xxxxx". (Python is unusual in that you can actually write an expression 5 * "x" that will evaluate to "xxxxx". For the sake of the exercise you should ignore that the problem can be solved in this manner.)
+'''
+
+def generate_n_chars(times,str):
+    
+    print('THE CHAR AND INT ENTERED ARE',str,times)
+    output=""
+    for i in range(0,times):
+        output=output+str
+
+    print('THE FINAL OUTPUT IS:',output)
+
+
+
+prompt='ENTER A CHAR:\n';
+x=raw_input(prompt)
+prompt='ENTER AN INTEGER NO:\n'
+try:
+   y=raw_input(prompt)
+   y=int(y)
+   generate_n_chars(y,x)
+except:
+   error=sys.exc_info()[0]
+   print('PLEASE ENTER ONLY INTEGER',error)
+
+
+
+
+
+
+
+
+

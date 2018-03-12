@@ -1,0 +1,41 @@
+#!/usr/bin/python
+
+# WRITE A PROGRAM THAT READS THE WORDS IN WORDS.TXT AND STORES THEM AS KEYS IN A DICTIONARY. IT DOESNT MATTER WHAT THE VALUES ARE. THEN YOU CAN USE THE "in" OPERATOR AS A FAST WAY TO CHECK WHETHER A STRING IS IN THE DICTIONARY.
+
+# USE FILE words.txt
+
+fhand=open('words.txt', 'r')
+
+test_dict={}   # DEFINE A DICTIONARY
+i=0
+for line in fhand:
+    print ("")
+    print (' THE FILE CONTAINS FOLLOWING WORDS::',line)
+
+    line=line.strip() # TAKE OUT THE \n AFTER EVERY WORD. OTHERWISE IT WILL PRINT "word\n"
+    test_dict[str(i)]=line # IF YOU DO ONLY i THEN, THE KEYS WILL BE 1,2,3. THIS WILL MAKE IT '1','2','3'.
+                           # WHICH IS HOW THE DICT KEYS ARE SUPPOSED TO BE. {'1': 'XYZ', '2': 'ABC'}
+
+    i=i+1
+
+print ("THE DICTIONARY AFTER READING THE FILE IS ::", test_dict)
+
+print ("DICT KEYS AND ITS RESPECTIVE VALUES ARE ", test_dict.keys(), test_dict.values())
+print ("")
+substr=raw_input("PLEASE ENTER WHAT WORD YOU WANT TO CHECK WHETHER ITS PRESENT IN THE DICT AS KEY::")
+substr=substr.strip()
+print ('substr which needs to be searched in dictinoary is ',substr)
+
+if substr in test_dict: # THIS WILL SEARCH THE KEYS FOR SEARCHING FOR VALUES THE CODE IS DIFFT AS SHOWN BELOW.
+    print "KEYS PRESENT---TRUE"
+else:
+    print "KEYS NOT PRESENT---FALSE"
+
+val_substr=raw_input("PLEASE ENTER WHAT WORD YOU WANT TO CHECK WHETHER ITS PRESENT IN THE DICT AS VALUE::")
+val_substr=val_substr.strip()
+print ('val_substr which needs to be searched in dictinoary is ',val_substr)
+
+if val_substr in test_dict.values():
+    print "VALUE PRESENT---TRUE"
+else:
+    print "VALUE NOT PRESENT---FALSE"

@@ -1,0 +1,44 @@
+#/usr/local/python
+
+# Str.endswidth:It returns True if the string ends with the specified suffix, otherwise return False optionally restricting the matching with the given indices start and end. There is another function called Str.startswith
+
+####### Example of str.endswith
+# x="aryan and sim"
+# y="sim"
+# z="and"
+# print x
+#aryan and sim
+# x.endswith(y)
+#True
+# x.endswith(y,2)
+#True
+# x.endswith(z)
+#False
+# x.endswith(z,6,9)
+#True
+
+print ("""
+        Code for str.endswidth which is a function which does following
+        It returns True if the string ends with the specified suffix, 
+        otherwise return False optionally restricting the matching with 
+        the given indices start and end
+       """)
+
+input="this is a test program which is written in python"
+substring="pythons"
+
+lenin=len(input)
+lensub=len(substring)
+
+print("1", input[lenin-lensub:lenin])
+
+print("2", substring[:])
+if substring[:] == input[lenin-lensub:lenin]:
+   print ("PASS::::INPUT STRING ENDS WITH SUFFIX %s" %substring)
+else:
+   print ("FAIL::INPUT STRING DOESNT END WITH SUFFIX %s" %substring)
+   
+     
+
+
+

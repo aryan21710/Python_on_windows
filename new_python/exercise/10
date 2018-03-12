@@ -1,0 +1,46 @@
+#!/usr/bin/python
+'''
+Define a function overlapping() that takes two lists and returns True if they have at least one member in common, False otherwise. You may use your is_member() function, or the in operator, but for the sake of the exercise, you should (also) write it using two nested for-loops.
+'''
+
+def overlapping(l1,l2):
+
+    print(' 1ST LIST:',l1)
+    print(' 2nd LIST:',l2)
+    output=0 
+    for i in range(0,len(l1)):
+        for j in range(0,len(l2)):
+            if (l1[i]==l2[j]):
+                output=1
+                break
+    return output
+
+
+
+
+l1=[]
+l2=[]
+
+while("TRUE"):
+     prompt1='ENTER THE CONTENTS OF LIST 1:\n'
+     x1=raw_input(prompt1)
+     x1=x1.upper()
+     if (x1 != 'EXIT'):
+        l1.append(x1)
+     else:
+        break
+print("**************************************")
+while("TRUE"):
+     prompt2='ENTER THE CONTENTS OF LIST 2:\n'
+     x2=raw_input(prompt2)
+     x2=x2.upper()
+     if (x2 != 'EXIT'):
+        l2.append(x2)
+     else:
+        break
+output=overlapping(l1,l2)
+if (output):
+   print('OVERLAPPING')
+else:
+   print('NOT OVERLAPPING')
+

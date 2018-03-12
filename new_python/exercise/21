@@ -1,0 +1,27 @@
+#!/usr/bin/python
+'''
+Write a function char_freq() that takes a string and builds a frequency listing of the characters contained in it. Represent the frequency listing as a Python dictionary. Try it with something like char_freq("abbabcbdbabdbdbabababcbcbab")
+'''
+
+def char_freq(input):
+
+    dict={}
+    count=0
+    for i in input:
+        if (i not in dict):
+              count=0
+              count=count+1
+              dict[i]=count
+        else:
+              count=dict[i]+1
+              dict[i]=count
+                 
+
+    print('dict is',dict)
+
+
+
+prompt='ENTER A STRING WITH MULTIPLE REPEATED ALPHABETS IN IT:\n'
+input=raw_input(prompt)
+
+char_freq(input)

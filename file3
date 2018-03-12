@@ -1,0 +1,45 @@
+#!/usr/bin/python
+
+# Write a program to prompt for a file name, and then read through the file and look for lines of the form: "X-DSPAM-Confidence:  0.8475". When you encounter a line that starts with "X-DSPAM-Confidence:" pull apart the line to extract the floating point number on the line. Count these lines and the compute the total of the spam confidence values from these lines. When you reach the end of the file, print out the average spam confidence.
+
+# USE file testfile3
+
+import sys
+cnt,i=0,0
+list_spamvalue=[]
+filename=raw_input("PLEASE ENTER THE FILENAME TO EXECUTE THIS PROGRAM::")
+
+if filename != 'testfile3':
+   print (" PLEASE ENTER THE FILENAME AGAIN AND MAKE SURE ITS testfile3 WHICH IS IN PWD")
+else:
+
+   try:   
+      fhand=open('testfile3','r')
+      print ('#### FILE IS TOO BIG. GOING TO PRINT ITS CONTENTS NOW #####')
+   
+      for line in fhand:
+          if 'X-DSPAM-Confidence:' in line:
+              count=line.count('X-DSPAM-Confidence:')          
+              cnt=cnt+count 
+              spamvalue=line.split(':') 
+              spamvalue=spamvalue[-1]
+              spamvalue=spamvalue.strip()
+              spamvalue=float(spamvalue) # THIS WILL REMOVE THE ' FROM THE LIST CHAR WHICH ARE FLOAT NO's. 
+              list_spamvalue.append(spamvalue) # MOVING THE VALUES TO A LIST
+              print ("THE LINE WHERE IT APPEAERS IS AD ITS SPAMVALUE IS::", line,spamvalue)
+          else:
+              continue
+   except:
+      
+      e=sys.exc_info()[0]
+      print ('SOME PROBLEM IN READING THRU THE FILE',e)
+
+   a='\n\n'
+   print(a)
+ 
+   finalvalue=float() 
+   finalvalue=sum(list_spamvalue)  # THIS WILL ADD ALL THE LIST ELEMENTS WHICH ARE FLOAT NO's
+   print("THE TOTAL SPAMVALUE FOR X-DSPAM-Confidence:",finalvalue)
+
+   print ("NO OF TIMES X-DSPAM-Confidence: APPEARS IN FILE IS:",cnt)
+   fhand.close() 

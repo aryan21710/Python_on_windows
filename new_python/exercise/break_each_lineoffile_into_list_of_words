@@ -1,0 +1,18 @@
+#!/usr/bin/python
+
+#Write a Python program to read through the lines of the file, break each line into a list of words.THE INPUT IS A FILE AND OUTPUT SHOULD BE A LIST WHOSE ELEMENTS WILL BE WORDS OF THE FILE
+
+# Use file dict_file_reference
+print ("FILE USED AS INPUT FOR THIS PROGRAM is:: dict_file_reference")
+
+
+fhand=open('dict_file_reference','r')
+lst=[]
+
+for line in fhand:
+    line=line.split()
+    for i in line:
+        lst.append(i)
+
+
+print(len(lst),':', lst)

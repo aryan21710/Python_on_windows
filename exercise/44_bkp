@@ -1,0 +1,72 @@
+#!/usr/bin/python
+import re
+
+prompt='ENTER A STRING WITH ANY NO OF OPEN AND CLOSE SQAURE BRACKETS::\n'
+input=raw_input(prompt)
+
+
+
+open_brack='['
+close_brack=']'
+no_open_brack=0
+no_close_brack=0
+for i in range(len(input)):
+    if input[i]=='[': no_open_brack=no_open_brack+1
+    if input[i]==']': no_close_brack=no_close_brack+1
+
+
+lst=list(input)
+s=[]
+e=[]
+expr1='\]'
+expr='\['
+print ('open_brack and close_brack are',no_open_brack,no_close_brack)
+if (input.startswith('[') and input.endswith(']')) and (no_open_brack==no_close_brack):
+   for match in re.finditer(expr,input):
+       s.append(match.start())       
+   for match in re.finditer(expr1,input):
+       e.append(match.start()) 
+
+
+       print (s,e)
+
+       maxs=max(s)
+       print ('max s is',maxs)
+       flag='TRUE'
+       while flag=='TRUE':
+             for j in range(len(e)):
+                 if e[j]==maxs+1:
+                    print (e[j])
+                    s.remove(maxs)
+                    print ('removed',maxs)
+                    print ('len of s is',len(s))
+                    lst.remove(maxs)
+                    lst.remove(e[j])
+                    print ('AFTER REMOVE LST IS', lst)
+                    input=""
+                    s=[]
+                    e=[]
+                    for i in range(len(lst)):
+                        input=input+lst[i]
+                    print ('AFTER REMOVE input IS', input)
+                     
+                    for match in re.finditer(expr,input):
+                        s.append(match.start())       
+                    for match in re.finditer(expr1,input):
+                        e.append(match.start()) 
+                    print ('AFTER REMOVE new s and e', s,e)
+                    if len(s) > 0:
+                       maxs=max(s)
+                       print ('after remove new maxs is',maxs)
+                       break 
+                    else:
+                       flag='FALSE'
+                       break
+                 else:
+                    continue
+   if len(s)==0:
+      print ('STRING IS BALANCED')
+   else:                      
+      print ('STRING IS UNBALANCED')
+else:
+   print ('UNBALANCED STRING')

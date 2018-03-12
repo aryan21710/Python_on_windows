@@ -1,0 +1,72 @@
+#!/usr/bin/python
+import re
+
+'''
+USE FILE reg_expression_file_11a and reg_expression_file_11b. Our task is to create a list with the top 19 cities, with the city names accompanied by the postal code
+'''
+
+city_fname='reg_expression_file11_a'
+postal_fname='reg_expression_file11_b'
+
+fhand=open(city_fname,'r')
+#expr="(?P<rank>[\d]+.)\s+(?P<city>[a-zA-Z]+\s[a-zA-Z]*\s[a-zA-Z]*).*"
+expr="(?P<rank>[\d]+.)\s+(?P<city>[a-zA-Z]+\s+[^0-9]+).*"
+lst=[]
+lst1=[]
+for line in fhand:
+    line=line.rstrip()
+    res=re.search(expr,line)
+    lst.append(res.group('city'))
+    lst1.append(res.group('rank'))
+    print res.group('rank')+" "+res.group('city')
+print ("*******************************")
+for i in range(len(lst)):
+    lst[i]=lst[i].rstrip()
+#print lst
+fhand1=open(postal_fname,'r')
+expr1="([\d]+),\"([a-zA-Z]+\s*[a-zA-Z]*\s*[a-zA-Z]*)\",([\d]+),.*"
+#expr1="([\d]+),\"([a-zA-Z]+\s+)\",([\d]+),.*"
+lst3=[]
+code=[]
+PLZ = {}
+for line1 in fhand1:
+
+    (post_code, city, rest) = line1.split(",",2)
+    PLZ[city.strip("\"")] =  post_code
+    print PLZ[city.strip("\"")]
+
+'''
+    for i in lst:
+        line1=line1.rstrip()
+        if re.search('^[\d]+\,i',line1): 
+
+
+#          print ('i and line1 is', i,line1)
+           if i not in lst3:
+              print ('i and line1 is', i,line1)
+              res1=re.search(expr1,line1)
+              lst3.append(res1.group(2))
+              code.append(res1.group(3))
+             print ('^^^^',res1.group(1)+" "+res1.group(2)+" "+res1.group(3))
+           else:
+              continue
+        else:
+           continue
+    
+
+print ("*******************************")
+
+print ('lst is',lst,len(lst))
+print (" ")
+print ('lst1 is',lst1,len(lst))
+print (" ")
+print ('lst3 is',lst3,len(lst3))
+print (" ")
+print ('code is',code,len(code))
+print (" ")
+for i in range(len(lst)):
+    for j in range(len(code)):
+
+#       print lst1[i]+" "+lst[i]+" "+code[j]
+
+'''

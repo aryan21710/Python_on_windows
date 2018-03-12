@@ -1,0 +1,25 @@
+#!/usr/bin/python
+
+'''
+A pangram is a sentence that contains all the letters of the English alphabet at least once, for example: The quick brown fox jumps over the lazy dog. Your task here is to write a function to check a sentence to see if it is a pangram or not.
+'''
+
+prompt='ENTER A SENTENCE ::\n'
+input=raw_input(prompt)
+
+lst="abcdefghijklmnopqrstuvwxyz"
+alphabet_lst=list(lst)
+flag='NOT PANGRAM'
+for i in range(len(alphabet_lst)):
+
+    if alphabet_lst[i] not in input:
+       print (alphabet_lst[i], 'NOT PRESENT. THATS WHY NOT PANGRAM')
+       flag='NOT PANGRAM'
+       break
+    else:
+       flag='PANGRAM'
+
+
+print (' THE SENTENCE IS::', flag)
+       
+       

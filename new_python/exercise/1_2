@@ -1,0 +1,42 @@
+#!/usr/bin/python
+import sys
+'''
+Define a function max() that takes two numbers as arguments and returns the largest of them. Use the if-then-else construct available in Python. (It is true that Python has the max() function built in, but writing it yourself is nevertheless a good exercise.)
+'''
+
+
+def max_no(num_lst):
+
+   print('THE NO\'S PASSED TO THE FUNC ARE',num_lst)
+   if (len(num_lst) == 2):
+       if num_lst[0] > num_lst[1]:
+          return num_lst[0]
+       else:
+          return num_lst[1] 
+
+   else:
+       print('LIST HAS MORE THAN 2 ELEMENTS, FAILING THE TEST \n');
+
+
+lst=[]
+x=""
+prompt=""
+while (x != "done"):
+
+    
+      prompt='ENTER A VALID INTEGER NO,IF DONE THEN PLEASE ENTER \'done\'\n'
+      x=raw_input(prompt)
+      try:
+         x=int(x)
+         lst.append(x)
+      except:
+         error=sys.exc_info()[0]
+         print('PLEASE ENTER ONLY INTEGER:',error)
+     
+
+
+print('NO\'s ENTERED BY USER ARE',lst) 
+
+
+output=max_no(lst)
+print('THE MAX NO IS ',output)

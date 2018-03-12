@@ -1,0 +1,22 @@
+#/usr/local/python
+
+# Str.capitalize: Return a copy of the string with its first character capitalized and the rest lowercased
+
+
+prompt='ENTER A STRING :\n'
+input=raw_input(prompt)
+
+print('THE STRING ENTERED IS:', input)
+output=""
+i=0
+for i in range(0,len(input)):
+  
+    if (i==0):
+       output=output+input[i].upper()
+    else:
+       output=output+input[i].lower()
+
+
+print output
+   
+     

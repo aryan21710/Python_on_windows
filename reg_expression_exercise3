@@ -1,0 +1,23 @@
+#!/usr/bin/python
+import re
+import math
+fname='testfile3'
+fhand=open(fname,'r')
+output=[]
+count=0
+for line in fhand:
+    line=line.rstrip()
+    match=re.findall('^New.*: ([0-9]*)',line)
+    if len(match) > 0:
+       count=count+1
+       print (line,"****",match)
+       output.append(float(match[0]))
+
+
+print ('THE COUNT,LIST,AND LENGTH LIST IS:', count,output,len(output))
+
+sumlst=sum(output)
+
+avg=sumlst/count
+
+print ('THE SUM and AVG OF THE NUMBERS ARE:', sumlst,avg)
