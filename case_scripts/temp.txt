@@ -1,0 +1,83 @@
+Binary file ../.git/objects/pack/pack-fabff753b8b13c515c919ac21e7541385c977481.pack matches
+Binary file ../case_scripts/general-practice-tests-set1.pdf matches
+../case_scripts/opening_pdf.py:output=open('output.txt','wb')
+../exercise/40_anagram_game:Colour word anagram: onwbr
+../exercise/46_file:blowback
+../exercise/46_file:browbeaten
+../exercise/46_file:catawba
+../exercise/46_file:cowbell
+../exercise/46_file:cowbird
+../exercise/46_file:cowboy
+../exercise/46_file:crowbait
+../exercise/46_file:crowberry
+../exercise/46_file:drawback
+../exercise/46_file:drawbridge
+../exercise/46_file:jawbone
+../exercise/46_file:jawbreak
+../exercise/46_file:lawbreak
+../exercise/46_file:lawbreaker
+../exercise/46_file:lawbreaking
+../exercise/46_file:lowboy
+../exercise/46_file:marrowbone
+../exercise/46_file:newbold
+../exercise/46_file:newborn
+../exercise/46_file:rawboned
+../exercise/46_file:rowboat
+../exercise/46_file:sawbelly
+../exercise/46_file:screwball
+../exercise/46_file:screwbean
+../exercise/46_file:showboat
+../exercise/46_file:snowball
+../exercise/46_file:sowbelly
+../exercise/46_file:squawbush
+../exercise/46_file:strawberry
+../exercise/46_file:throwback
+../exercise/46_file:towboat
+../exercise/new_excercises/www_pythonchallenge_com/3.file:THEobVZUgmAlVBlqvPgHEGpelbIfzYKHmAmJFlwbhQHWeSLuvPQrUWEQcLwdkalMnyLVyZiFzomxyhHX
+../exercise/new_excercises/www_pythonchallenge_com/3.file:XgpphuwefbcAOAKpzwbDNvSXCAtdMlpQsrWybYMRsIvEKmBHqpVWHraJctgLRiUJHzEtjcCuICPTHMXM
+../exercise/new_excercises/www_pythonchallenge_com/3.file:duwblnoWDoREeimDNltOUcYuIephxkHFadPsNSOAybJWrlWRkuBGVFlGcVFCdXSpxaYncbRyqpVCrKwV
+../exercise/new_excercises/www_pythonchallenge_com/3.file:oYzTwbyRkYYKeLcVGhYTjxfgsjlzrpYcejXiMCNJCBLlcgLXXBWjboZiCCcOzQEShdOgJiUppMmXcPWr
+../exercise/new_excercises/www_pythonchallenge_com/3.file:knuzmGoLoLWXoevZhnqUGYTTFDlfwthkaWcnDdFePxCHzxzQeFAydEwbtScanupNEgrcvJHEaTDUDKot
+../exercise/new_excercises/www_pythonchallenge_com/3.file:BKKYrwBRObhoZchLfAysiMtSejuBChwiLUWWFdYjwbGMpFGjjfOFlJZTlogPaCqpFlHYUHQvYlnMtdwT
+../exercise/new_excercises/www_pythonchallenge_com/3.file:CIwnAeiTfINZpSIpwbAUCfOxQhuMDyOFlyyeFsjtzAvWJMtTyCXstQSrqQMHOjHwlojyoWehOhIWLsTa
+../exercise/new_excercises/www_pythonchallenge_com/3.file:PpgBElXvuusgWfrHQUeFcVtbuAxSepfIVlXXxcDEtaVzYWydOCqnGPpOzNZoGGUEDAFtwbIFVnJsGnfy
+../exercise/new_excercises/www_pythonchallenge_com/3.file:MympZGIzmOoQOPmOkFuXWoWTEAJjHZyVmVSOOBeUjQGHVlldMumXIicYAVwmvIwbrScWfWEkAScmElnA
+../exercise/new_excercises/www_pythonchallenge_com/3.file:nGKmaFNSrwbukcCxykPUtkehCVwzOejgFalfLurrenvDTRRtIixVHIJRqydUjykMegTIxHYBMznwCECD
+../exercise/new_excercises/www_pythonchallenge_com/3.file:jScvFngvPJKZigDwbtHtHaNuIOmMQAPHCDdCbZjhOnlDoOLDrjtVanadGCbgIuPQUBBLVszGcfvGKrQC
+../exercise/new_excercises/www_pythonchallenge_com/3.file:rokQeWrvwbBNLmigUuyRBsIPlLZsSdNBvpxGbevNKgRNAULkFOQsGtSpAMsMugcKUIvxJPDFtxBKROsf
+../exercise/new_excercises/www_pythonchallenge_com/3.file:NCWaQUFNxXWuCeTaQAIecnnLWuQBaxVnVKrZfdWENPwblIiyfHsxACcWynyAYhdCYXrQQqLYPcqsdznm
+../exercise/new_excercises/www_pythonchallenge_com/3.file:mvIhQyNKwrjRVwbeYQAeBGjSuKVOBTcFviENjGYOLZJFbCYzvNPrhmKQtTFZZvtUQnRpXyHuwfDpDkqq
+../exercise/new_excercises/www_pythonchallenge_com/3.file:jeHvMRMlaGuVtOqICFGmStysPtfbtHumOablrdCdjduBZHGFNXuhQVVRRsjuwVNeAGVwbJYwpgxXchOV
+../exercise/new_excercises/www_pythonchallenge_com/3.file:kMfjzLqhnwvjqpRVzsmMkCaIMtANOWrwbMHGiYDtZzIjRZgVVGmuPesMFCWNfBYQsbrjaaxmogFWfOFq
+../exercise/new_excercises/www_pythonchallenge_com/3.file:aHQjxPdzdutoXcTnvnutFHyAlPzNtWVSzAiyDfteJBBVTZIadAuCJTRWOiwbUfJYvvbJaFbdYDVmxkxB
+../exercise/new_excercises/www_pythonchallenge_com/3.file:RbfzfLsrxVUtYNjMEIWDZIUuOnArNoSQLgSwbcPjQjVIZYvHbsKrlxlIUbnHoptRHQaSzPqcwgGxpkcH
+../exercise/new_excercises/www_pythonchallenge_com/3.file:NfcRJEzwbBkijaMfSFSneHagPpwXfrlRDvdvJpcmFUTCxmpOEuauphztcbRzZJgfumWOiViUwxucRFPz
+../exercise/new_excercises/www_pythonchallenge_com/3.file:WrManDWqSsFpNOvBltPNrzprkwbyjXfWpEFggrFFYCUAXyyrMUTnFHYDrTSzLjIhJPogBDssLBmwUrQN
+../exercise/new_excercises/www_pythonchallenge_com/3.file:LCCJZMUXKpIvUbswbOMFdRKDBtBkwXLsspVSwHPhelEVaGOGmnfbBAddkTwGWwqGHsZaYMTGEmXiTlOG
+../exercise/new_excercises/www_pythonchallenge_com/3.file:oxbpUNlumKMTwbgylUpbyNgivOCfvQVIOYyvqzHJlYYuDYvbmYzALwGOJqWplUHBMBUNwusBcScYtghp
+../exercise/new_excercises/www_pythonchallenge_com/3.file:RUhggLxDJOZDICAlNMWipYilRLZAtOWEVXIIsxkrZlFEwgtbXwbXoGipJXxtpwGKRFjZWcZucEGxbnUS
+../exercise/new_excercises/www_pythonchallenge_com/3.file:sJwbcKWXJVMOXvypmswLxHTfWWDsfHmekrqLCtCTWWsWktuItgFnzPvDuldQUODvxyKoJIDUicbduKfR
+../exercise/new_excercises/www_pythonchallenge_com/3.file:JFMiUzYQJTvNehBcwbnwjqkADCHDbslWMDfnSzxfEijxguFPbaOanACLdxCzNExOatygqSKCMUJjPNzn
+../exercise/new_excercises/www_pythonchallenge_com/3.file:eqtMAvqGciqgVHtUBXiPPhXZtbHigVaiTAfLFjTEkgMwrwbIHpROGAUasuqnVUdGazjsecBFMWyGiThf
+../exercise/new_excercises/www_pythonchallenge_com/3.file:ItZRRldRgbnMIaZhZonGSYHzRwvrTbXCwSbNLBXzKVilkenPyjSWewbNbqtJUAPlobAuMPEDecJzZLij
+../exercise/new_excercises/www_pythonchallenge_com/3.file:cGJCAlMGLtclsHnstJNIAjmElExMEjGNzIiLbgcFnydxqRWYIEMBMzdbrgkVMQhumJAhYZlawbxAAGCB
+../exercise/new_excercises/www_pythonchallenge_com/3.file:zTWuKdkixlvKhSpjLFUdwwbCAIpqGkUqNcAkgTxFNCwwkHpVYRtuCrDOetrSgwfFqSBGsyEvBiOSqqIT
+../exercise/new_excercises/www_pythonchallenge_com/3.file:UmgCsepyhDAPfFTCDhwbwoKSUxndJGcZwJDsyQfyNXjQMNmnEGRlyiquhdWIBCiiBcDlAwngIBGCiJge
+../exercise/new_excercises/www_pythonchallenge_com/3.file:KwfladpvTxGfrGXokDqwKSrKslwbXUFYrOUdLOUdIbEwRSpcVlTFOAkMWQfYfBTdfTlRRNxiZDOlnuAC
+../exercise/new_excercises/www_pythonchallenge_com/3.file:cPFOIEWdIApeNXYFoNPgCkyfLEXrKECXEhbSfVnwbdESNYGawhsfEwiLctYaneUsKRPAcYMgsrlGzRzm
+../exercise/new_excercises/www_pythonchallenge_com/3.file:QOOcxdaBBHJgxZoQWAjaJKNDsXSDeVfwMzgSrQabQbqDeVUTprVAYToUOWqecHnJvHprCTSnwcWefwbG
+../exercise/new_excercises/www_pythonchallenge_com/3.file:NceoGRHFjNfXLsKwbPiNYVmSiHhpJTklzrfvFKvgYKKIgmzCZlrGbRsaLvrixcCrTONHXdahQlxlmgfZ
+../exercise/new_excercises/www_pythonchallenge_com/3.file:iNmYOoBeoAaXRKoyzcIxeRbGSTAqEQTsclYQqMzxrKgDLGICIFUMRVNNuPAEuVtbZfSJfxQwbCZlyztd
+../exercise/new_excercises/www_pythonchallenge_com/3.file:ZmUtANTNukfCEfnREMkxncPqAizRnFVgkyfZefFrZewmDcAYsFUHcmNHXDlNMdzpHSewbvDyIncJzdrJ
+../exercise/new_excercises/www_pythonchallenge_com/3.file:TfLUoqtphXtIUdaUvjygVkJhPpIErGfRRSzPcfouqUjwbQrLbxtSbzxuIYHTBgfTidekGvkTmZhOvKoO
+../exercise/new_excercises/www_pythonchallenge_com/3.file:sixtEBTXiTrJlFugJJinVkkbhLmqsFopbYvgaGJegniJJOgknCaJuCFNXIwbFotMMJUVKMfQoqwKQbEt
+../exercise/new_excercises/www_pythonchallenge_com/3.file:timFGHPJPaHMPTLjsBjIwbbzKyghaDTUStzJceaYAneywwpvdiUJifPHtXmAwZPChWsDmwonzeeQCEiB
+../exercise/new_excercises/www_pythonchallenge_com/3.file:sBmsnUbVnHUGAyaDirMoowBwXnzrmfHJgfpAquFoHTuvQvIJcjqiqVdntXbgwpVywbsKxqUMNxYVxBmQ
+../exercise/new_excercises/www_pythonchallenge_com/3.file:nhdMSCKCPbpWZguZHGkLiWCisjqnaLbJpbRFAHPjGbHOXKZQXoQQZohmVqjTcdWNhXEjPlLKnjpwbMPQ
+../exercise/new_excercises/www_pythonchallenge_com/3.file:AWzUtwblZXNrBYdjUoDacvmRVURqOzUPlnFISsZMFPtthnDHSsFgkYfsMtXFuNPhLTleWVrmelyFaemo
+../exercise/new_excercises/www_pythonchallenge_com/3.file:lTRBhWBkTbRwbEpTimHCPMktFOJXsrKenghxEkyMpFagzWrGyUKXCieKHfCyLMKnLgQanMeyKSTzwnjs
+../exercise/new_excercises/www_pythonchallenge_com/3.file:lrXosQbYuhjuAxhtgXtwbuTeucJVywKgtZyNnhjXRLLiHwMoPfpPPyAQZrFGfbzHgulXsmlxPFbWXpuT
+../handlingExcelSheets.py:wb = openpyxl.Workbook()
+../handlingExcelSheets.py:dir (wb)
+../handlingExcelSheets.py:sheet = wb.sheetnames('Sheet')
+../new_python/exercise/40_anagram_game:Colour word anagram: onwbr

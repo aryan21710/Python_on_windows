@@ -1,0 +1,13 @@
+#!/usr/bin/python
+
+from Tkinter import *
+root=Tk()
+logo=PhotoImage(file="/Users/AryanS/Downloads/3p_2.gif")
+w=Label(root, image=logo)
+w.pack(side="right")
+texts='I LOVE YOU SIM'
+w1=Label(root, text=texts,justify=LEFT,padx=20,pady=20)
+w1.pack(side='right')
+root.mainloop()
+
+

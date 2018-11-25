@@ -1,0 +1,29 @@
+./case_scripts/opening_pdf.py:path='C://Users//aryan//Desktop//ielts-blog//general-practice-tests-set1.pdf' 
+./linux_find_search_commands:/Users/AryanS/python/str.center
+./linux_find_search_commands:/Users/AryanS/python/str.count
+./linux_find_search_commands:/Users/AryanS/python/str.endswith
+./linux_find_search_commands:/Users/AryanS/python/str.isalpha
+./linux_find_search_commands:/Users/AryanS/python/str.replace
+./linux_find_search_commands:bash-3.2$ find /Users/AryanS/python -name "xyz" 
+./linux_find_search_commands:/Users/AryanS/python/xyz
+./linux_find_search_commands:/Users/AryanS/python/1:# Str.capitalize: Return a copy of the string with its first character capitalized and the rest lowercased
+./linux_find_search_commands:/Users/AryanS/python/1:# This code needs to be worked on in which you can scan through the list and thru loop, picks up the first letter, make it capital and rest of the letter leave it blank. NEED TO FIND OUT HOW TO OVERWRITE THE STRING IN THE LOOP.  REFER str.capitalize program for the solution
+./linux_find_search_commands:/Users/AryanS/python/1:print "Code for str.capitalize"
+./linux_find_search_commands:/Users/AryanS/python/all_string_functions:capitalize()
+./linux_find_search_commands:/Users/AryanS/python/list_usage:print ("new name list before sorting is \n " ,name)
+./linux_find_search_commands:/Users/AryanS/python/list_usage:name.sort() # SORTING WONT WORK IF LIST IS HAVING UPPER AND LOWER CHAR MIXED
+./linux_find_search_commands:/Users/AryanS/python/list_usage:print ("new name list after sorting is \n " ,name)
+./linux_find_search_commands:/Users/AryanS/python/list_usage:        a.sort()
+./linux_find_search_commands:/Users/AryanS/python/list_usage:print ("new name list before sorting is \n " ,name)
+./linux_find_search_commands:/Users/AryanS/python/list_usage:name.sort() # SORTING WONT WORK IF LIST IS HAVING UPPER AND LOWER CHAR MIXED
+./linux_find_search_commands:/Users/AryanS/python/list_usage:print ("new name list after sorting is \n " ,name)
+./linux_find_search_commands:/Users/AryanS/python/list_usage:        a.sort()
+./linux_find_search_commands:/Users/AryanS/python/basic_dictionary_usage
+./linux_find_search_commands:/Users/AryanS/python/dict_file
+./linux_find_search_commands:/Users/AryanS/python/dict_file_reference
+./linux_find_search_commands:/Users/AryanS/python/dict_keys_alphabetical_order
+./linux_find_search_commands:/Users/AryanS/python/dict_usage
+./linux_find_search_commands:/Users/AryanS/python/dict_usage2
+./tkinter_scripts/2:logo=PhotoImage(file="/Users/AryanS/Downloads/3p_2.gif")
+./tkinter_scripts/3:logo=PhotoImage(file="/Users/AryanS/Downloads/3p_2.gif")
+./tkinter_scripts/4:logo=PhotoImage(file="/Users/AryanS/Downloads/3p_2.gif")

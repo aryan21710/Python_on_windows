@@ -1,0 +1,13 @@
+
+From Account	05231610037671
+Beneficiary Name	KINGFISHER AIRLINES LIMITED
+Beneficiary IFSC Code	UTIB0000007
+Beneficiary Account Number / Credit Card Number	007010200046817
+Bank Name	AXIS BANK
+Transfer Amount	46,000.00
+Transfer Description	Dubai tour
+Mode of Communication	SMS
+Communication detail	7259278985
+
+
+hdfc bank:- 05231610037671 (richmond road bangalore)
